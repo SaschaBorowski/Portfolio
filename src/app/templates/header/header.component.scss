@@ -1,0 +1,82 @@
+@import "../../../colors.scss";
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    width: 90%;
+    padding-top: 32px;
+}
+
+.language-button-container {
+    display: flex;
+    border-radius: 16px;
+    border: 1px solid $lightblue;
+    gap: 0px;
+    color: $lightblue;
+}
+
+.language-button-EN {
+    font-weight: 700;
+    font-size: 16px;
+    background-color: $lightblue;
+    color: $white;
+    border-radius: 24px;
+    padding: 4px 16px 4px 16px;
+}
+
+.language-button-DE {
+    font-weight: 400;
+    font-size: 16px;
+    border-radius: 24px;
+    padding: 4px 16px 4px 16px;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.header-navbar {
+    color: $white;
+    margin-left: 24px;
+    font-weight: 400;
+    font-size: 20px;
+
+    &:hover {
+        cursor: pointer;
+        border-bottom: 1px solid $lightblue;
+    }
+}
+
+.header-logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.header-left-container {
+    display: flex;
+    align-items: center;
+}
+
+.header-right-container {
+    display: flex;
+    align-items: center;
+    font-family: Karla;
+    font-size: 32px;
+    color: $white;
+    font-weight: 700;
+
+    img {
+        width: auto;
+        height: 58px;
+    }
+}
+
+.header-logo-name-lastname-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}

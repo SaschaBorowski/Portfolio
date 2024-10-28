@@ -1,0 +1,218 @@
+@import "../../colors.scss";
+
+.startpage-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+}
+
+.startpage-title-name-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    h2 {
+        font-family: Fira Code;
+        font-size: 40px;
+        color: $white;
+        margin: 0;
+    }
+
+    h1 {
+        font-family: Karla;
+        font-size: 128px;
+        color: $white;
+        margin: 0;
+    }
+}
+
+.vertical-line-arrow-down-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    height: 100%;
+
+    .arrow-down-container {
+        border: 1px solid $lightblue;
+        border-radius: 16px;
+        padding: 16px 8px;
+        margin-bottom: 16px;
+        overflow: hidden;
+
+        .arrow-down {
+            animation: jumpDown 1s infinite linear;
+            cursor: pointer;
+        }
+    }
+
+    .vertical-line-scroll {
+        width: 1px;
+        background-color: $lightblue;
+        height: 200px;
+    }
+}
+
+@keyframes jumpDown {
+    0% {
+        animation-timing-function: ease-out;
+        transform: translateY(14px);
+    }
+
+    50% {
+        animation-timing-function: ease-in;
+        transform: translateY(4px);
+    }
+
+    100% {
+        animation-timing-function: ease-out;
+        transform: translateY(14px);
+    }
+}
+
+.startpage-buttons-container {
+    display: flex;
+    align-items: center;
+    gap: 48px;
+    margin-top: 16px;
+}
+
+.startpage-button-container {
+    border: 1px solid $white;
+    border-radius: 16px;
+    padding: 8px 16px;
+    transition: border-color 0.35s ease-in-out;
+    overflow: hidden;
+
+    &:hover {
+        border-color: $lightblue;
+        cursor: pointer;
+
+        .startpage-button {
+            animation: moveLeft 2s infinite linear;
+        }
+    }
+}
+
+@keyframes moveLeft {
+    0% {
+        transform: translateX(0%);
+        visibility: visible; // Sichtbar am Start
+    }
+
+    49% {
+        visibility: visible; // Sichtbar bis kurz vor dem Verschwinden
+    }
+
+    50% {
+        transform: translateX(-120%);
+        visibility: hidden; // Unsichtbar, wenn es nach links verschwindet
+    }
+
+    51% {
+        transform: translateX(120%);
+        visibility: hidden; // Unsichtbar beim "Springen" nach rechts
+    }
+
+    52% {
+        visibility: visible; // Wieder sichtbar, wenn es von rechts zurückkommt
+    }
+
+    100% {
+        transform: translateX(0%); // Zurück zur Ausgangsposition
+        visibility: visible; // Sichtbar an der Endposition
+    }
+}
+
+.startpage-git-email-button-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 100%;
+
+    .startpage-git-button-container {
+        margin-top: 32px;
+        width: 32px;
+        height: 32px;
+        background-image: url("../../assets/icons/git_lightblue.svg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        transition: background-image 0.15s ease-in-out;
+
+        &:hover {
+            cursor: pointer;
+            background-image: url("../../assets/icons/git_white.svg");
+        }
+    }
+
+    .startpage-email-container {
+        writing-mode: vertical-lr;
+        transform: scale(-1, -1);
+
+        a {
+            color: $white;
+            text-decoration: none;
+            transition: color 0.15s ease-in-out;
+            font-family: Karla;
+            font-size: 18px;
+
+
+            &:hover {
+                color: $lightblue;
+                cursor: pointer;
+            }
+        }
+    }
+
+    .vertical-line-git {
+        width: 1px;
+        background-color: $lightblue;
+        height: 150px;
+        margin-top: 16px;
+    }
+}
+
+.startpage-banner-container {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 34px;
+    height: 58px;
+    font-family: Karla;
+    font-size: 32px;
+    transform: rotate(-2deg);
+    width: 100%;
+    background-color: #363b3a48;
+    overflow: hidden;
+
+    .banner-text-container {
+        gap: 80px;
+        display: flex;
+        align-items: center;
+        white-space: nowrap;
+        animation: bannerSlide 30s linear infinite;
+
+        .banner-text {
+            gap: 80px;
+            display:flex;
+            align-items: center;
+            
+        }
+    }
+}
+
+@keyframes bannerSlide {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}

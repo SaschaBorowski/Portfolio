@@ -1,0 +1,139 @@
+@import "../../colors.scss";
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 80vh;
+    h2 {
+        justify-content: flex-start;
+        align-items: flex-start;
+        width: 90%;
+        font-family: Karla;
+        font-weight: 700;
+        font-size: 24px;
+        color: $lightblue;
+    }
+}
+
+.technologies-container {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+}
+
+.technologies-skill-set-container {
+    width: 568px;
+    height: 568px;
+    background-color: #1f2e2b;
+    border-radius: 30px;
+    border: 1px solid $lightblue;
+    font-family: Karla;
+    font-size: 18px;
+    padding-left: 24px;
+    padding-right: 24px;
+
+    h1 {
+        font-family: Fira Code;
+        font-weight: 700;
+        font-size: 64px;
+        color: $lightblue;
+    }
+
+    .technologies-anotherSkill-container {
+        display:flex;
+        gap: 12px;
+        .technologies-youNeed {
+            font-family: Fira Code;
+            font-weight: 700;
+            font-size: 24px;
+        }
+    
+        .technologies-anotherSkill {
+            font-family: Fira Code;
+            font-weight: 700;
+            font-size: 24px;
+            color: $lightblue;
+        }
+    }
+    
+}
+
+.letsTalk-container {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid $white;
+    border-radius: 20px;
+    transition: border-color 0.35s ease-in-out;
+    overflow: hidden;
+    width: 128px;
+    height: 39px;
+    margin-top: 64px;
+    &:hover {
+        border-color: $lightblue;
+        cursor: pointer;
+
+        .letsTalk-button {
+            animation: moveLeft 2s infinite linear;
+        }
+    }
+}
+
+@keyframes moveLeft {
+    0% {
+        transform: translateX(0%);
+        visibility: visible;
+    }
+
+    49% {
+        visibility: visible;
+    }
+
+    50% {
+        transform: translateX(-140%);
+        visibility: hidden;
+    }
+
+    51% {
+        transform: translateX(140%);
+        visibility: hidden;
+    }
+
+    52% {
+        visibility: visible;
+    }
+
+    100% {
+        transform: translateX(0%);
+        visibility: visible;
+    }
+}
+
+.technologies-icons-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 618px;
+    height: 428px;
+
+    div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-family: Fira Code;
+        text-align: center;
+        font-size: 18;
+        width: 150px;
+        height: 116px;
+
+        img {
+            transition: scale 0.15s ease-in-out;
+
+            &:hover {
+                scale: 1.07;
+            }
+        }
+
+
+    }
+}
