@@ -1,4 +1,11 @@
 @import "../../../colors.scss";
+
+.header-margin {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
 header {
     display: flex;
     align-items: center;
@@ -15,25 +22,27 @@ header {
     border: 1px solid $lightblue;
     gap: 0px;
     color: $lightblue;
-}
 
-.language-button-EN {
-    font-weight: 700;
-    font-size: 16px;
-    background-color: $lightblue;
-    color: $white;
-    border-radius: 24px;
-    padding: 4px 16px 4px 16px;
-}
 
-.language-button-DE {
-    font-weight: 400;
-    font-size: 16px;
-    border-radius: 24px;
-    padding: 4px 16px 4px 16px;
+    .language-button {
+        font-weight: 400;
+        font-size: 16px;
+        border-radius: 24px;
+        padding: 4px 16px;
+        background-color: transparent;
+        color: $lightblue;
+        transition: background-color 0.3s ease, color 0.3s ease;
 
-    &:hover {
-        cursor: pointer;
+        &:hover {
+            cursor: pointer;
+            color: $white;
+        }
+
+        &.active {
+            font-weight: 700;
+            background-color: $lightblue;
+            color: $white;
+        }
     }
 }
 
@@ -79,4 +88,91 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    cursor: default;
+}
+
+.menu-container {
+    display: none;
+}
+
+.hamburger-menu-container {
+    display: none;
+}
+
+@media (max-width: 800px) {
+    .header-left-container {
+        display: none;
+    }
+
+    .menu-container {
+        display: block;
+        cursor: pointer;
+    }
+
+    /* Overlay */
+    .overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.5);
+        /* Abdunkeln */
+        z-index: 998;
+    }
+
+    .hamburger-menu-container.open {
+        display: block;
+        transform: translateX(0);
+    }
+
+    .hamburger-menu-container {
+        position: fixed;
+        width: 140px;
+        top: 88px;
+        right: 24px;
+        background: linear-gradient(205deg, #09453A 0%, #1C1C1C 67%);
+        border-radius: 16px;
+        border: 1px solid $lightblue;
+        padding: 32px 48px;
+        z-index: 999;
+
+        .hamburger-menu-wrapper {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            .language-button-container {
+                border-radius: 16px;
+                width: 84px;
+
+                .language-button {
+                    padding: 4px 14px;
+                    font-size: 12px;
+                }
+            }
+
+            .hamburger-aboutMe {
+                cursor: pointer;
+                margin-bottom: 16px;
+                font-family: Fira Code;
+                font-size: 18px;
+            }
+
+            .hamburger-skills {
+                cursor: pointer;
+                margin-bottom: 16px;
+                font-family: Fira Code;
+                font-size: 18px;
+            }
+
+            .hamburger-project {
+                cursor: pointer;
+                margin-bottom: 16px;
+                font-family: Fira Code;
+                font-size: 18px;
+            }
+        }
+    }
 }

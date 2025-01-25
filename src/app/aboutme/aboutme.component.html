@@ -1,19 +1,20 @@
-<div class="aboutme-main">
+<div id="aboutme-id" class="aboutme-main">
     <div class="aboutme-main-container">
         <div class="aboutme-picture-container">
-            <img src="../../assets/picture/mssingPicture.png" alt="SaschaBorowskiBild">
+
+            <div class="picture-me-container">
+                <img  src="../../assets/picture/sascha_borowski.png" alt="SaschaBorowskiBild">
+            </div>
         </div>
 
         <div class="aboutme-container">
             <div class="aboutme-headline-container">
-                <h2>Who I Am</h2>
+                <h2>{{ 'aboutme.whoiam' | translate }}</h2>
             </div>
             <div class="aboutme-text-container">
-                <h1>About me</h1>
+                <h1>{{ 'aboutme.aboutme' | translate }}</h1>
                 <div class="mb32">
-                    Hi, Im a german speaking Frontend Developer based in Munich. Motivated by the limitless
-                    opportunities
-                    within IT, I am excited about crafting visually captivating and intuitive websites and applications.
+                    {{ 'aboutme.description' | translate}}
                 </div>
 
                 <div class="aboutme-flex mb16">
@@ -21,8 +22,7 @@
                         <img src="../../assets/icons/location_on.png" alt="location">
                     </div>
                     <div>
-                        Flexible in terms of working environments, I can work effectively both on-site in Munich and
-                        remotely.
+                        {{ 'aboutme.location' | translate }}
                     </div>
                 </div>
 
@@ -31,8 +31,7 @@
                         <img src="../../assets/icons/cognition.png" alt="cognition">
                     </div>
                     <div>
-                        I am open-minded and always looking for personal challenges to constantly improve my knowledge
-                        and skills.
+                        {{ 'aboutme.mind' | translate }}
                     </div>
                 </div>
 
@@ -41,9 +40,7 @@
                         <img src="../../assets/icons/new_releases.png" alt="releases">
                     </div>
                     <div>
-                        In my profession, programming isn't just about writing code; it's a creative form of
-                        problem-solving. I take pride in my ability to distill complex technical challenges into simple,
-                        user-friendly solutions. This way, I help you achieve your goals and bring your visions to life.
+                        {{ 'aboutme.goals' | translate }}
                     </div>
                 </div>
             </div>

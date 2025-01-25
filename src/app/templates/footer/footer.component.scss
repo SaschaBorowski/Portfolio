@@ -1,0 +1,51 @@
+@import "../../../colors.scss";
+
+main {
+    background-color: $grey;
+    height: 25vh;
+    display: flex;
+    justify-content: center;
+    padding-top: 104px;
+    font-family: Karla;
+    font-size: 16px;
+    color: #FFFFFF;
+    a {
+        text-decoration: none;
+        color: $white;
+        &:hover {
+            color: $lightblue;
+        }
+    }
+
+    .footer-margin {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 90%;
+    }
+
+    .footer-logo {
+        display: flex;
+        align-items: center;
+        font-family: Karla;
+        font-size: 32px;
+        color: $white;
+        font-weight: 700;
+        cursor: default;
+        img {
+            width: auto;
+            height: 58px;
+        }
+    }
+
+    .footer-fullname-container {
+        font-family: Fira Code;
+        font-size: 18px;
+        color: $lightblue;
+    }
+    .footer-links-container {
+        display:flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+}

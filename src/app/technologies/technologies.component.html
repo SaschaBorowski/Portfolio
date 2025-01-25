@@ -1,101 +1,107 @@
-<main>
+<main id="skills">
 
-    <h2>Technologies</h2>
+    <h2>{{ 'technologies.technologies' | translate }}</h2>
 
     <div class="technologies-container">
         <div class="technologies-skill-set-container">
             <div>
-                <h1>Skill Set</h1>
+                <h1>{{ 'technologies.skillset' | translate }}</h1>
             </div>
             <div>
                 <p>
-                    My journey has involved working on diverse projects, employing a range of frontend technologies
-                    and
-                    concepts. I am open to embracing new technologies and methodologies to Continously enhance my
-                    skills
-                    and
-                    stay ahead in the ever-evolving landscape of web development.
+                    {{ 'technologies.description' | translate }}
                 </p>
             </div>
             <div class="technologies-anotherSkill-container">
-                <p class="technologies-youNeed">You need</p>
-                <p class="technologies-anotherSkill">another Skill?</p>
+                <p class="technologies-youNeed">{{ 'technologies.youneed' | translate }}</p>
+                <p class="technologies-anotherSkill">{{ 'technologies.anotherskill' | translate }}</p>
             </div>
             <div>
-                Feel free to contact me. I look forward to expanding on my previous knowledge.
+                {{ 'technologies.contactme' | translate }}
             </div>
-            <div class="letsTalk-container">
-                <p class="letsTalk-button">Let's Talk</p>
+            <div (click)="scrollTo('contact-me')" class="letsTalk-container">
+                <p  class="letsTalk-button">{{ 'technologies.letstalk' | translate }}</p>
             </div>
         </div>
 
 
         <div class="technologies-icons-container">
-            <div>
+            <div class="technologies-skill-container">
                 <img src="../../assets/icons/html.png" alt="html">
                 <p>
                     HTML
                 </p>
             </div>
-            <div>
+            <div class="technologies-skill-container">
                 <img src="../../assets/icons/css.png" alt="css">
                 <p>
                     CSS
                 </p>
             </div>
-            <div>
+            <div class="technologies-skill-container">
                 <img src="../../assets/icons/Javascript.png" alt="javascript">
                 <p>
                     JavaScript
                 </p>
             </div>
-            <div>
+            <div class="technologies-skill-container">
                 <img src="../../assets/icons/Frame.png" alt="materialDesign">
                 <p>
                     Material <br> Design
                 </p>
             </div>
-            <div>
+            <div class="technologies-skill-container">
                 <img src="../../assets/icons/TypeScript.png" alt="typeScript">
                 <p>
                     TypeScript
                 </p>
             </div>
-            <div>
+            <div class="technologies-skill-container">
                 <img src="../../assets/icons/Angular.png" alt="angular">
                 <p>
                     Angular
                 </p>
             </div>
-            <div>
+            <div class="technologies-skill-container">
                 <img src="../../assets/icons/Firebase.png" alt="firebase">
                 <p>
                     Firebase
                 </p>
             </div>
-            <div>
+            <div class="technologies-skill-container">
                 <img src="../../assets/icons/git.png" alt="git">
                 <p>
                     GIT
                 </p>
             </div>
-            <div>
+            <div class="technologies-skill-container">
                 <img src="../../assets/icons/api.png" alt="restApi">
                 <p>
                     Rest-Api
                 </p>
             </div>
-            <div>
+            <div class="technologies-skill-container">
                 <img src="../../assets/icons/scrum.png" alt="scrum">
                 <p>
                     Scrum
                 </p>
             </div>
-            <div>
-                <img src="../../assets/icons/grow.png" alt="growthMindset">
-                <p>
-                    Growth <br> mindset
-                </p>
+            <div class="technologies-skill-container relative">
+                <div #container class="growthMindset-container" 
+                     (mouseenter)="onMouseEnter($event)" 
+                     (mousemove)="onMouseMove($event)" 
+                     (mouseleave)="onMouseLeave()" 
+                     (click)="onContainerClick($event)">
+                    <div class="growth-image-text-container">
+                        <img src="../../assets/icons/grow.svg" alt="growthMindset">
+                        <p>{{ 'technologies.growth' | translate }} <br> {{ 'technologies.mindset' | translate }}</p>
+                    </div>
+                    <div class="popup" [ngClass]="{ 'visible': isPopupVisible }"
+                         [ngStyle]="{ top: popupY + 'px', left: popupX + 'px' }" 
+                         [attr.aria-hidden]="!isPopupVisible">
+                        <img src="../../assets/icons/my_special_learning.png" alt="">
+                    </div>
+                </div>
             </div>
         </div>
     </div>

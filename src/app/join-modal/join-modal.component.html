@@ -1,0 +1,54 @@
+<main class="main-container">
+
+
+    <div class="modal-content">
+        <div class="close-btn-container">
+            <div class="close-btn" (click)="closeModal()"></div>
+        </div>
+
+
+        <div class="project-info-image-container">
+            <div class="project-info">
+                <div class="close-btn-project-image-responsive">
+                    <div class="close-btn-container-responsive">
+                        <div class="close-btn-responsive" (click)="closeModal()"></div>
+                    </div>
+                    <div class="project-image-responsive">
+                        <img src=" {{ projectData?.image }}" alt="">
+                    </div>
+                </div>
+                <div class="project-number">{{ projectData?.number }}</div>
+                <div class="project-title">{{ projectData?.title }}</div>
+                <div class="is-about">What is this project about?</div>
+                <p class="project-description">{{ projectData?.description }}</p>
+
+                <div class="project-languages-container">
+                    <div class="project-languages" *ngFor="let language of projectData?.languages">
+
+                        <img [src]="language.icon" [alt]="language.name" />
+                        <span>{{ language.name }}</span>
+
+                    </div>
+                </div>
+
+                <div class="project-links-container">
+                    <div class="project-link">
+                        <a target="_blank" href="{{ projectData?.githubLink }}"> GitHub <img
+                                src="../../assets/icons/arrow_topright_lightblue.png" alt="Git Hub"></a>
+                    </div>
+
+                    <div class="project-link">
+                        <a target="_blank" href="{{ projectData?.letsTestLink }}"> Live Test <img
+                                src="../../assets/icons/arrow_topright_lightblue.png" alt="Live Test"></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-image">
+                <img src=" {{ projectData?.image }}" alt="">
+            </div>
+        </div>
+
+
+    </div>
+</main>

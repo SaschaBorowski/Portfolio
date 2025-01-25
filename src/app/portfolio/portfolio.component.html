@@ -1,0 +1,97 @@
+<main id="projects-id">
+    <div class="portfolio-margin">
+        <div class="portfolio-headline-container">
+            <h2>
+                {{ 'portfolio.portfolio' | translate }}
+            </h2>
+        </div>
+        <div class="portfolio-seccond-headline-container">
+            <h1>
+                {{ 'portfolio.featured' | translate }}
+            </h1>
+        </div>
+        <div class="portfolio-description-container">
+            <p>
+                {{ 'portfolio.description1' | translate }} <br> {{ 'portfolio.description2' | translate }}
+            </p>
+        </div>
+
+
+
+        <div class="join-wrapper">
+            <div class="project-join-container" (mouseenter)="onHoverEnterJoin()" (mouseleave)="onHoverLeaveJoin()"
+                (click)="openModal('join')">
+                <div class="project-join-headline-arrow-container">
+                    <div class="project-join-headline">
+                        <p>Join</p>
+                    </div>
+                    <div>
+                        <img src="../../assets/icons/arrow-top-right.svg" alt="">
+                    </div>
+                </div>
+                <div class="project-join-languages-container">
+                    <p>JavaScript</p>
+                    <img src="../../assets/icons/_.png" alt="">
+                    <p>HTML</p>
+                    <img src="../../assets/icons/_.png" alt="">
+                    <p>CSS</p>
+                    <img src="../../assets/icons/_.png" alt="">
+                    <p>Firebase</p>
+                </div>
+            </div>
+            <div class="join-screenshot-container">
+                <img src="../../assets/picture/join_screenshot.png" alt=""
+                    [ngStyle]="{ opacity: joinIsHovered ? '1' : '0' }">
+            </div>
+        </div>
+
+
+        <div class="elPolloLoco-wrapper">
+            <div class="project-elPolloLoco-container" (mouseenter)="onHoverEnterElPolloLoco()"
+                (mouseleave)="onHoverLeaveElPolloLoco()" (click)="openModal('elPolloLoco')">
+                <div class="project-elPolloLoco-headline-arrow-container">
+                    <div class="project-elPolloLoco-headline">
+                        <p>
+                            El Pollo Loco
+                        </p>
+                    </div>
+                    <div>
+                        <img src="../../assets/icons/arrow-top-right.svg" alt="">
+                    </div>
+                </div>
+                <div class="project-elPolloLoco-languages-container">
+                    <p>HTML</p>
+                    <img src="../../assets/icons/_.png" alt="">
+                    <p>CSS</p>
+                    <img src="../../assets/icons/_.png" alt="">
+                    <p>JavaScript</p>
+                </div>
+            </div>
+            <div class="elPolloLoco-screenshot-container">
+                <img src="../../assets/picture/elpolloloco_screenshot.png" alt=""
+                    [ngStyle]="{ opacity: elPolloLocoIsHovered ? '1' : '0' }">
+            </div>
+        </div>
+
+
+    </div>
+
+    <div class="modal-overlay" *ngIf="isModalOpen" (click)="onOverlayClick($event)">
+        <div class="modal-container" (click)="$event.stopPropagation()">
+            <app-join-modal [projectData]="currentProject" (close)="closeModal()">
+            </app-join-modal>
+            <div class="btn-wrapper">
+                <div class="arrow-btn-container">
+                    <div class="arrow-btn" (click)="switchProject()">
+                        Next project
+                        <img src="../../assets/icons/arrow_forward_lightblue.png" alt="Switch Project Arrow">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+
+</main>

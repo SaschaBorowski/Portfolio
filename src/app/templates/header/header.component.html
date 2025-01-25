@@ -1,20 +1,58 @@
-<header>
-    <div class="header-logo-container">
-        <div class="header-left-container">
-            <div class="language-button-container">
-                <div class="language-button-EN">EN</div>
-                <div class="language-button-DE">DE</div>
+<div class="header-margin">
+    <header>
+        <div class="header-logo-container">
+            <div class="header-left-container">
+
+                <div class="language-button-container">
+                    <div (click)="switchLanguage('en')" class="language-button"
+                        [ngClass]="{ active: activeLanguage === 'en' }">
+                        EN
+                    </div>
+                    <div (click)="switchLanguage('de')" class="language-button"
+                        [ngClass]="{ active: activeLanguage === 'de' }">
+                        DE
+                    </div>
+                </div>
+                <div class="header-navbar" (click)="scrollTo('aboutme-id')">{{ 'header.aboutme' | translate }}</div>
+                <div class="header-navbar" (click)="scrollTo('skills')">{{ 'header.skills' | translate }}</div>
+                <div class="header-navbar" (click)="scrollTo('projects-id')">{{ 'header.projects' | translate }}</div>
             </div>
-            <div class="header-navbar">About me</div>
-            <div class="header-navbar">Skills</div>
-            <div class="header-navbar">Projects</div>
-        </div>
-        <div class="header-right-container">
-            <img src="../../assets/logo/logo.png" alt="">
-            <div class="header-logo-name-lastname-container">
-                <div>Sascha</div>
-                <div>Borowski</div>
+            <div class="header-right-container">
+                <img src="../../assets/logo/logo.png" alt="">
+                <div class="header-logo-name-lastname-container">
+                    <div>Sascha</div>
+                    <div>Borowski</div>
+                </div>
+            </div>
+            <div class="menu-container">
+                <img src="../../../assets/icons/hamburger_menu.png" alt="Menu" (click)="toggleMenu()">
+            </div>
+
+            <!-- Overlay -->
+            <div class="overlay" *ngIf="isMenuOpen" (click)="closeMenu()">
+            </div>
+
+            <div class="hamburger-menu-container" [ngClass]="{ 'open': isMenuOpen }">
+                <div class="hamburger-menu-wrapper">
+                    <div class="hamburger-aboutMe" (click)="closeMenu()" (click)="scrollTo('aboutme-id')">{{ 'header.aboutme' | translate }}
+                    </div>
+                    <div class="hamburger-skills" (click)="closeMenu()" (click)="scrollTo('skills')">{{ 'header.skills' | translate }}</div>
+                    <div class="hamburger-project" (click)="closeMenu()" (click)="scrollTo('projects-id')">{{ 'header.projects' | translate }}
+                    </div>
+                    <div>
+                        <div class="language-button-container">
+                            <div (click)="switchLanguage('en')" class="language-button"
+                                [ngClass]="{ active: activeLanguage === 'en' }">
+                                EN
+                            </div>
+                            <div (click)="switchLanguage('de')" class="language-button"
+                                [ngClass]="{ active: activeLanguage === 'de' }">
+                                DE
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-</header>
+    </header>
+</div>

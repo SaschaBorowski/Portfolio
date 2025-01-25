@@ -1,5 +1,7 @@
 @import "../../colors.scss";
 
+
+
 .mb32 {
     margin-bottom: 32px;
 }
@@ -13,17 +15,46 @@
     height: 100vh;
     display: flex;
     justify-content: center;
+    background-color: $grey;
 
     .aboutme-main-container {
         display: flex;
         justify-content: space-between;
         width: 90%;
 
+
         .aboutme-picture-container {
             margin-top: 128px;
-
+            margin-left: 32px;
             img {
                 border-radius: 32px;
+            }
+
+            .picture-me-container {
+                z-index: 5;
+                position:relative;
+                
+
+                img {
+                    display:block;
+                    position: relative;
+                    width: auto;
+                    height: 600px;
+                }
+
+                &::before {
+                    content: '';
+                    position:absolute;
+                    top: 32px;
+                    left: -32px;
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 32px;
+                    background-image: url('../../assets/picture/image_background.png');
+                    background-size: cover;
+                    background-position: center;
+                    z-index: -1;
+                }
             }
         }
 
@@ -41,7 +72,7 @@
 
             .aboutme-text-container {
                 width: 568px;
-                height: 568px;
+                height: auto;
                 background-color: #1f2e2b;
                 border-radius: 30px;
                 border: 1px solid $lightblue;
@@ -66,13 +97,127 @@
 }
 
 .aboutme-image-container {
-    display:flex;
+    display: flex;
     justify-content: center;
     width: 20px;
     margin-right: 32px;
     margin-left: 16px;
+
     img {
         width: 32px;
         height: 32px;
+    }
+}
+
+@media (max-width: 1250px) {
+    .aboutme-main {
+        height: 148dvh;
+    }
+
+    .aboutme-main-container {
+        width: 100% !important;
+        display:flex;
+        flex-direction: column;
+        align-items:center !important;
+        justify-content:flex-start !important;
+    }
+
+    .aboutme-container {
+        margin-top: 48px !important;
+    }
+
+    .aboutme-picture-container {
+        margin-top: 48px !important;
+    }
+
+    .aboutme-text-container {
+        width:415px !important;
+    }
+}
+
+@media (max-width: 750px) {
+    .aboutme-main {
+        height: 148dvh;
+    }
+}
+
+@media (max-width: 550px) {
+    .picture-me-container {
+        img {
+            height: 500px !important;
+        }
+    }
+
+    .aboutme-text-container {
+        width:350px !important;
+    }
+}
+
+@media (max-width: 450px) {
+    .picture-me-container {
+        img {
+            height: 400px !important;
+        }
+    }
+
+    .aboutme-text-container {
+        width:280px !important;
+    }
+
+    .aboutme-text-container {
+        height: auto;
+        background-color: #1f2e2b;
+        border-radius: 30px;
+        border: 1px solid $lightblue;
+        font-family: Karla;
+        font-size: 18px;
+        padding-left: 24px;
+        padding-right: 24px;
+
+        h1 {
+            color: $lightblue;
+            font-family: Fira Code;
+            font-weight: 700;
+            font-size: 48px !important;
+        }
+    }
+
+    .aboutme-main {
+        height: 148dvh;
+    }
+}
+
+@media (max-width: 350px) {
+    .picture-me-container {
+        img {
+            height: 300px !important;
+        }
+    }
+
+    .aboutme-text-container {
+        width:200px !important;
+    }
+
+    .aboutme-text-container {
+        width: 568px;
+        height: auto;
+        background-color: #1f2e2b;
+        border-radius: 30px;
+        border: 1px solid $lightblue;
+        font-family: Karla;
+        font-size: 16px !important;
+        padding-left: 24px;
+        padding-right: 24px;
+
+        h1 {
+            color: $lightblue;
+            font-family: Fira Code;
+            font-weight: 700;
+            font-size: 32px !important;
+        }
+    }
+
+    .aboutme-main {
+        height: 158dvh;
     }
 }

@@ -1,0 +1,224 @@
+@import "../../colors.scss";
+
+main {
+    background-color: $grey;
+    height: 55vh;
+    display: flex;
+    justify-content: center;
+    padding-top: 160px;
+
+    a {
+        text-decoration: none;
+    }
+    
+    .contact-me-margin {
+        display: flex;
+        width: 90%;
+    }
+
+    .m-top-32 {
+        margin-top: 32px;
+    }
+
+    .m-left-6 {
+        margin-left: 6px;
+    }
+
+    .m-top-16 {
+        margin-top: 16px;
+    }
+
+    .m-top-24 {
+        margin-top: 24px;
+    }
+
+    .m-left-right-6 {
+        margin-left: 6px;
+        margin-right: 6px;
+    }
+
+    .m-left-32 {
+        margin-left: 32px;
+    }
+
+    .contact-me-container {
+        width: 50%;
+
+        .karla-24-500-lightblue {
+            font-family: Karla;
+            font-size: 24px;
+            color: $lightblue;
+            font-weight: 500;
+        }
+
+        .firaCode-64-700-lightblue {
+            font-family: Fira Code;
+            font-size: 64px;
+            color: $lightblue;
+            font-weight: 700;
+        }
+
+        .firaCode-24-700-lightblue {
+            font-family: Fira Code;
+            font-size: 24px;
+            color: $lightblue;
+            font-weight: 700;
+        }
+
+        .karla-16-400-white {
+            font-family: Karla;
+            font-size: 16px;
+            color: $white;
+            font-weight: 400;
+        }
+
+        .letsTalk-container {
+            display: flex;
+
+            .karla-16-700-lightblue {
+                font-family: Karla;
+                font-size: 16px;
+                font-weight: 700;
+                color: $lightblue;
+            }
+        }
+
+        .contactNeedLetsTalk {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+    }
+
+    .contact-form-container {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+
+        .line {
+            height: 1px;
+            background-color: $lightblue;
+            width: 100%;
+        }
+
+        .firaCode-24-500-lightblue {
+            font-family: Fira Code;
+            font-size: 24px;
+            font-weight: 500;
+            color: $lightblue;
+        }
+
+        .input-field-style {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            color: $white;
+            background-color: #00000000;
+            border: none;
+            border-bottom: 1px solid #00000000;
+            appearance: none;
+            padding-inline: 0px;
+            transition: border-bottom 150ms ease-in-out;
+            caret-color: $lightblue-hover;
+
+            &:focus {
+                outline: none;
+                border-bottom: 1px solid $lightblue-hover;
+            }
+
+            &:hover {
+                border-bottom: 1px solid $lightblue-hover;
+            }
+
+            &::placeholder {
+                color: $white;
+                font-family: Karla;
+                font-size: 18px;
+            }
+
+            &:focus::placeholder {
+                color: transparent;
+            }
+        }
+    }
+    
+    .read-check-container {
+        display: flex;
+
+        .quad {
+            width: 20px;
+            height: 20px;
+            margin-right: 8px;
+            appearance: none;
+            border: 2px solid $lightblue;
+            background-color: rgba(255, 255, 255, 0);
+            box-sizing: border-box;
+            position: relative;
+            transition: scale ease-in-out 100ms;
+
+            &:hover {
+                cursor: pointer;
+                scale: 1.05;
+                transition: all 0.2s ease-in-out;
+            }
+        }
+
+        .quad::after {
+            content: '';
+            position: absolute;
+            width: 5px;
+            height: 10px;
+            border: 2px solid $lightblue;
+            border-width: 0 2px 2px 0;
+            transform: rotate(45deg);
+            top: 0px;
+            left: 5px;
+            opacity: 0;
+            transition: opacity 0.2s ease-in-out;
+        }
+
+        .quad:checked::after {
+            opacity: 1;
+        }
+
+        .karla-15-400-white {
+            font-family: Karla;
+            font-size: 15px;
+            font-weight: 400;
+            color: $white;
+        }
+
+        .d-flex {
+            display: flex;
+            align-items: center;
+        }
+
+        .firaCode-15-400-lightblue {
+            font-family: Fira Code;
+            font-size: 15px;
+            font-weight: 400;
+            color: $lightblue;
+            &:hover {
+                color: $lightblue-darker;
+            }
+        }
+    }
+}
+
+.error {
+    color: red;
+    font-family: Karla;
+    font-size: 14px;
+    margin-top: 4px;
+}
+
+.errorPlaceholder {
+    
+    &::placeholder {
+      color: red !important;
+      font-family: Karla !important;
+      font-size: 16px !important;
+      font-weight: 400 !important;
+      opacity: 1 !important;
+    }
+  }

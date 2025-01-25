@@ -1,0 +1,38 @@
+@import "../../colors.scss";
+
+* {
+    font-family: Karla;
+}
+
+main {
+    background: linear-gradient(122deg, #09453a 0%, #1c1c1c 76%, #1c1c1c 94%);
+    width: 100%;
+    display:flex;
+    justify-content: center;
+    .privacy-wrapper {
+        width: 90%;
+    }
+
+    .privacy-email-container {
+        padding-bottom: 32px;
+    }
+
+    a {
+        text-decoration: none;
+        color: $lightblue;
+        &:hover {
+            color: $lightblue-hover;
+        }
+    }
+}
+
+
+h1 {
+    padding-top: 32px;
+    margin-top: 0;
+    font-family: Fire Code;
+}
+
+h2, h3, h4 {
+    font-family: Fire Code;
+}

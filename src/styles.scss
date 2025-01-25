@@ -1,6 +1,10 @@
 @import "fonts.scss";
 @import "colors.scss";
 
+* {
+    scroll-behavior: smooth;
+}
+
 html, body {
     height: 100%;
     width: 100%;
@@ -8,7 +12,5 @@ html, body {
     margin: 0;
     font-family: Fira Code;
     font-weight: 400;
-    font-size: 20;
     color: $white;
-    background: linear-gradient(45deg, #1c1c1c 0%, #1b1b1b 29% 40%, #09453a 98%);
 }

@@ -1,0 +1,231 @@
+@import "../../colors.scss";
+
+.project-number {
+    font-family: Karla;
+    font-weight: 700;
+    font-size: 128px;
+    color: $lightblue;
+}
+
+.project-title {
+    font-family: Fira Code;
+    font-size: 64px;
+    font-weight: 700;
+    color: $white;
+}
+
+.main-container {
+    width: 100%;
+    height: 650px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+
+    .modal-content {
+        width: 90%;
+        height: 90%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+
+        .project-info-image-container {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+
+
+            .project-info {
+                flex-direction: column;
+                justify-content: center;
+
+                .is-about {
+                    font-family: 'Fira Code';
+                    font-weight: 700;
+                    font-size: 24px;
+                    color: $lightblue;
+                }
+
+                .project-description {
+                    font-family: Karla;
+                    font-weight: 400;
+                    font-size: 18px;
+                    color: $white;
+                }
+
+                .project-languages-container {
+                    height: 24px;
+                    display: flex;
+                    align-items: center;
+                    gap: 16px;
+
+                    .project-languages {
+                        display: flex;
+                        align-items: center;
+                        gap: 4px;
+                    }
+                }
+
+                .project-links-container {
+                    display: flex;
+                    align-items: center;
+                    gap: 32px;
+                    margin-top: 32px;
+
+                    .project-link {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: 130px;
+                        height: 48px;
+                        border-radius: 100px;
+                        border: 1px solid $white;
+                        transition: all 155ms ease-in-out;
+                        cursor: pointer;
+
+                        a {
+                            text-decoration: none;
+                            color: $white;
+                            font-family: Karla;
+                            font-size: 18px;
+                            transition: all 155ms ease-in-out;
+                        }
+
+                        img {
+                            transition: all 155ms ease-in-out;
+                        }
+
+                        &:hover {
+                            a {
+                                color: $lightblue;
+                            }
+
+                            img {
+                                transform: translateX(4px) translateY(-4px);
+                            }
+
+                            border: 1px solid $lightblue;
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+}
+
+.close-btn-container {
+    width: 100%;
+
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 32px;
+
+    .close-btn {
+        width: 16px;
+        height: 16px;
+        align-self: flex-end;
+        margin-right: 8px;
+        background-image: url('../../assets/icons/close_small_white.svg');
+        background-size: cover;
+        font-size: 20px;
+        cursor: pointer;
+        transition: all 155ms ease-in-out;
+
+        &:hover {
+            background-image: url('../../assets/icons/close_small_lightblue.svg');
+            scale: 1.25;
+
+        }
+    }
+}
+
+.project-image-responsive {
+    display: none;
+}
+
+.close-btn-container-responsive {
+    display: none;
+}
+
+.close-btn-responsive {
+    display: none;
+}
+
+@media (max-width: 1300px) {
+    .main-container {
+        height: 85dvh;
+    }
+    .close-btn-project-image-responsive {
+        display:flex;
+        width: 100%;
+        flex-direction: column;
+    }
+    .project-image {
+        display: none;
+    }
+    .close-btn {
+        display: none;
+    }
+    .close-btn-container-responsive {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        height: 48px;
+    }
+    
+    .close-btn-responsive {
+        display: flex;
+        width: 16px;
+        height: 16px;
+        background-image: url('../../assets/icons/close_small_white.svg');
+        background-size: cover;
+        font-size: 20px;
+        cursor: pointer;
+    }
+
+    .project-image-responsive {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img {
+            width: auto;
+            height: 250px;
+        }
+    }
+}
+
+@media (max-width: 800px) {
+    .main-container {
+        height: 80dvh;
+    }
+    .project-number {
+        font-size: 72px;
+    }
+    .project-title {
+        font-size: 56px;
+    }
+    .project-description {
+        font-size: 16px;
+    }
+    .project-image-responsive {
+        padding-top: 0px;
+    }
+}
+
+@media (max-width: 600px) {
+    .project-image-responsive {
+        img {
+            width: auto;
+            height: 225px;
+        }
+    }
+    .close-btn-container-responsive {
+        height: 88px;
+    }
+}

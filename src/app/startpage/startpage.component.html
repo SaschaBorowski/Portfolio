@@ -1,69 +1,75 @@
-<div class="startpage-container">
-    <div class="vertical-line-arrow-down-container">
-        <div class="arrow-down-container">
-            <div class="arrow-down">
-                <img src="../../assets/icons/arrow_down.png" alt="scrolldown">
-            </div>
-        </div>
-        <div class="vertical-line-scroll">
-        </div>
-    </div>
-    <div class="startpage-title-name-container">
-        <h2>
-            Frontend Developer
-        </h2>
-        <h1>
-            Sascha Borowski
-        </h1>
-        <div class="startpage-buttons-container">
-
-            <div class="startpage-button-container">
-                <div class="startpage-button">
-                    Check my work
+<main>
+    <div class="startpage-margin">
+        <div class="startpage-container">
+            <div class="vertical-line-arrow-down-container">
+                <div class="arrow-down-container">
+                    <div class="arrow-down">
+                        <img src="../../assets/icons/arrow_down.png" alt="scrolldown">
+                    </div>
+                </div>
+                <div class="vertical-line-scroll">
                 </div>
             </div>
+            <div class="startpage-title-name-container">
+                <h2>
+                    Frontend {{ 'startpage.developer' | translate }}
+                </h2>
+                <h1>
+                    Sascha Borowski
+                </h1>
+                <div class="startpage-buttons-container">
 
-            <div class="startpage-button-container">
-                <div class="startpage-button">
-                    Contact me
+                    <div (click)="scrollTo('projects-id')" class="startpage-button-container">
+                        <div class="startpage-button">
+                            {{ 'startpage.mywork' | translate }}
+                        </div>
+                    </div>
+
+                    <div (click)="scrollTo('contact-me')" class="startpage-button-container">
+                        <div class="startpage-button">
+                           {{ 'startpage.contactme' | translate }}
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="startpage-git-email-button-container">
+                <div class="startpage-email-container">
+                    <a href="mailto:saschaborowski@outlook.de">saschaborowski&#64;outlook.de</a>
+                </div>
+                <a target="_blank" href="mailto:saschaborowski@outlook.de" class="startpage-email-button-container">
+                </a>
+                <a target="_blank" href="https://github.com/SaschaBorowski" class="startpage-git-button-container">
+                </a>
+                <div class="vertical-line-git"></div>
+            </div>
+        </div>
+        <div class="startpage-banner-container">
+            <div class="banner-text-container">
+
+                <div class="banner-text">
+                    <img src="../../assets/icons/radio_button_unchecked.png" alt="">
+                    <p>{{ 'startpage.opentowork' | translate }}</p>
+                    <img src="../../assets/icons/radio_button_unchecked.png" alt="">
+                    <p>{{ 'startpage.available' | translate }}</p>
+                    <img src="../../assets/icons/radio_button_unchecked.png" alt="">
+                    <p>Frontend {{ 'startpage.developer' | translate }}</p>
+                    <img src="../../assets/icons/radio_button_unchecked.png" alt="">
+                    <p>{{ 'startpage.based' | translate }}</p>
+
+                </div>
+                <div class="banner-text">
+                    <img src="../../assets/icons/radio_button_unchecked.png" alt="">
+                    <p>{{ 'startpage.opentowork' | translate }}</p>
+                    <img src="../../assets/icons/radio_button_unchecked.png" alt="">
+                    <p>{{ 'startpage.available' | translate }}</p>
+                    <img src="../../assets/icons/radio_button_unchecked.png" alt="">
+                    <p>Frontend {{ 'startpage.developer' | translate }}</p>
+                    <img src="../../assets/icons/radio_button_unchecked.png" alt="">
+                    <p>{{ 'startpage.based' | translate }}</p>
                 </div>
             </div>
         </div>
-
     </div>
-
-    <div class="startpage-git-email-button-container">
-        <div class="startpage-email-container">
-            <a href="mailto:saschaborowski@outlook.de">saschaborowski&#64;outlook.de</a>
-        </div>
-        <a target="_blank" href="https://github.com/SaschaBorowski" class="startpage-git-button-container">
-        </a>
-        <div class="vertical-line-git"></div>
-    </div>
-</div>
-<div class="startpage-banner-container">
-    <div class="banner-text-container">
-
-        <div class="banner-text">
-            <img src="../../assets/icons/radio_button_unchecked.png" alt="">
-            <p>Open to work</p>
-            <img src="../../assets/icons/radio_button_unchecked.png" alt="">
-            <p>Available for remote work</p>
-            <img src="../../assets/icons/radio_button_unchecked.png" alt="">
-            <p>Frontend Developer</p>
-            <img src="../../assets/icons/radio_button_unchecked.png" alt="">
-            <p>Based in Frankenthal</p>
-
-        </div>
-        <div class="banner-text">
-            <img src="../../assets/icons/radio_button_unchecked.png" alt="">
-            <p>Open to work</p>
-            <img src="../../assets/icons/radio_button_unchecked.png" alt="">
-            <p>Available for remote work</p>
-            <img src="../../assets/icons/radio_button_unchecked.png" alt="">
-            <p>Frontend Developer</p>
-            <img src="../../assets/icons/radio_button_unchecked.png" alt="">
-            <p>Based in Frankenthal</p>
-        </div>
-    </div>
-</div>
+</main>
