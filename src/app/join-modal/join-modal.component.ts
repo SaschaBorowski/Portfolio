@@ -6,7 +6,7 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './join-modal.component.html',
-  styleUrl: './join-modal.component.scss'
+  styleUrls: ['./join-modal.component.scss', './join-modal.component2.scss', './join-modal.component.responsive.scss']
 })
 
 export class JoinModalComponent {

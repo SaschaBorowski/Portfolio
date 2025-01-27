@@ -1,0 +1,55 @@
+@import "../../colors.scss";
+
+main {
+    .contact-form-container {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+
+        .line {
+            height: 1px;
+            background-color: $lightblue;
+            width: 100%;
+        }
+
+        .firaCode-24-500-lightblue {
+            font-family: Fira Code;
+            font-size: 24px;
+            font-weight: 500;
+            color: $lightblue;
+        }
+
+        .input-field-style {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            color: $white;
+            background-color: #00000000;
+            border: none;
+            border-bottom: 1px solid #00000000;
+            appearance: none;
+            padding-inline: 0px;
+            transition: border-bottom 150ms ease-in-out;
+            caret-color: $lightblue-hover;
+
+            &:focus {
+                outline: none;
+                border-bottom: 1px solid $lightblue-hover;
+            }
+
+            &:hover {
+                border-bottom: 1px solid $lightblue-hover;
+            }
+
+            &::placeholder {
+                color: $white;
+                font-family: Karla;
+                font-size: 18px;
+            }
+
+            &:focus::placeholder {
+                color: transparent;
+            }
+        }
+    }
+}

@@ -1,0 +1,30 @@
+@import "../../colors.scss";
+
+.technologies-icons-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 618px;
+    height: 428px;
+
+    .technologies-skill-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-family: Fira Code;
+        text-align: center;
+        font-size: 18px;
+        width: 150px;
+        height: 132px;
+        cursor: default;
+
+        &:hover {
+            img {
+                transition: scale 0.15s ease-in-out;
+                scale: 1.07;
+            }
+        }
+    }
+}

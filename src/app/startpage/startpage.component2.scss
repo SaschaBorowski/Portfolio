@@ -1,0 +1,94 @@
+@import "../../colors.scss";
+
+.startpage-git-email-button-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 100%;
+
+    .startpage-git-button-container {
+        margin-top: 32px;
+        width: 32px;
+        height: 32px;
+        background-image: url("../../assets/icons/git_lightblue.svg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        transition: background-image 0.15s ease-in-out;
+
+        &:hover {
+            cursor: pointer;
+            background-image: url("../../assets/icons/git_white.svg");
+        }
+    }
+
+    .startpage-email-container {
+
+        writing-mode: vertical-lr;
+        transform: scale(-1, -1);
+
+        a {
+            color: $white;
+            text-decoration: none;
+            transition: color 0.15s ease-in-out;
+            font-family: Karla;
+            font-size: 18px;
+
+
+            &:hover {
+                color: $lightblue;
+                cursor: pointer;
+            }
+        }
+    }
+
+    .vertical-line-git {
+        width: 1px;
+        background-color: $lightblue;
+        height: 150px;
+        margin-top: 16px;
+    }
+}
+
+.startpage-banner-container {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 34px;
+    height: 58px;
+    font-family: Karla;
+    font-size: 32px;
+    transform: rotate(-2deg);
+    width: 100%;
+    background-color: #363b3a48;
+    overflow: hidden;
+    backdrop-filter: blur(1px);
+
+    .banner-text-container {
+        gap: 80px;
+        display: flex;
+        align-items: center;
+        white-space: nowrap;
+        animation: bannerSlide 30s linear infinite;
+
+        .banner-text {
+            gap: 80px;
+            display: flex;
+            align-items: center;
+
+        }
+    }
+}
+
+@keyframes bannerSlide {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}

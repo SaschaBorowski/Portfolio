@@ -7,7 +7,7 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
   standalone: true,
   imports: [CommonModule, TranslateModule],
   templateUrl: './colleagues.component.html',
-  styleUrl: './colleagues.component.scss'
+  styleUrls: ['./colleagues.component.scss', './colleagues.component.responsive.scss']
 })
 export class ColleaguesComponent {
   boxes = [

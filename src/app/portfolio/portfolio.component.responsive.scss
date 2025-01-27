@@ -1,0 +1,121 @@
+@import "../../colors.scss";
+
+@media (max-width: 1700px) {
+    .join-screenshot-container {
+
+        right: 100px !important;
+
+        img {
+            opacity: 0;
+            transition: opacity 0.2s ease-in-out;
+        }
+    }
+
+    .elPolloLoco-screenshot-container {
+
+        right: 100px !important;
+
+        img {
+            opacity: 0;
+            transition: opacity 0.2s ease-in-out;
+        }
+    }
+}
+
+@media (max-width: 1400px) {
+    .join-screenshot-container {
+
+        right: 50px !important;
+
+        img {
+            opacity: 0;
+            transition: opacity 0.2s ease-in-out;
+        }
+    }
+
+    .elPolloLoco-screenshot-container {
+
+        right: 50px !important;
+
+        img {
+            opacity: 0;
+            transition: opacity 0.2s ease-in-out;
+        }
+    }
+}
+
+@media (max-width: 1350px) {
+    .join-screenshot-container {
+
+        right: 15px !important;
+
+        img {
+            opacity: 0;
+            transition: opacity 0.2s ease-in-out;
+        }
+    }
+
+    .elPolloLoco-screenshot-container {
+
+        right: 15px !important;
+
+        img {
+            opacity: 0;
+            transition: opacity 0.2s ease-in-out;
+        }
+    }
+}
+
+@media (max-width: 1300px) {
+    .modal-container {
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+        height: 95dvh;
+        background: linear-gradient(45deg, #1C1C1C 35%, #08463B 100%);
+        border-radius: 32px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        overflow: hidden;
+    }
+
+    .join-screenshot-container {
+        display: none;
+        right: 500px;
+
+        img {
+            opacity: 0;
+            transition: opacity 0.2s ease-in-out;
+        }
+    }
+
+    .elPolloLoco-screenshot-container {
+        display: none;
+        right: 500px;
+
+        img {
+            opacity: 0;
+            transition: opacity 0.2s ease-in-out;
+        }
+    }
+}
+
+@media (max-width: 1250px) {
+    main {
+        height: 85dvh;
+    }
+    .portfolio-margin {
+        width: 465px;
+    }
+
+    .project-join-container {
+        width: 465px;
+        justify-content:baseline;
+        gap: 0;
+    }
+
+    .project-elPolloLoco-container {
+        width: 465px;
+        justify-content: baseline;
+        gap: 0;
+    }
+}

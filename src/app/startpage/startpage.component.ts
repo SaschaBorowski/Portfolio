@@ -6,7 +6,7 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
   standalone: true,
   imports: [TranslateModule],
   templateUrl: './startpage.component.html',
-  styleUrl: './startpage.component.scss'
+  styleUrls: ['./startpage.component.scss', './startpage.component2.scss', './startpage.component.responsive.scss', './startpage.component.responsive2.scss']
 })
 
 export class StartpageComponent {

@@ -1,0 +1,109 @@
+@import "../../colors.scss";
+
+@media (max-width: 1900px) {
+    .startpage-banner-container {
+        width: 99.995%;
+    }
+}
+
+@media (max-width: 1500px) {
+    .startpage-banner-container {
+        width: 99.95%;
+    }
+}
+
+@media (max-width: 1250px) {
+    .startpage-title-name-container {
+        h2 {
+            font-size: 40px;
+        }
+
+        h1 {
+            font-size: 80px;
+        }
+    }
+
+    .startpage-banner-container {
+        width: 99.9%;
+    }
+}
+
+@media (max-width: 900px) {
+    .startpage-title-name-container {
+        h2 {
+            font-size: 24px;
+        }
+
+        h1 {
+            font-size: 64px;
+        }
+    }
+
+    .startpage-email-container {
+        display: none;
+    }
+
+    .startpage-email-button-container {
+        height: 25px;
+        width: 32px;
+        background-image: url("../../assets/icons/mail_lightblue.png");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        transition: background-image 0.15s ease-in-out;
+
+        &:hover {
+            cursor: pointer;
+            background-image: url("../../assets/icons/mail_white.png");
+        }
+    }
+}
+
+@media (max-width: 900px) {
+    .startpage-title-name-container {
+        h2 {
+            font-size: 24px;
+        }
+
+        h1 {
+            font-size: 40px;
+        }
+    }
+
+    .startpage-margin {
+        width: 95%;
+    }
+}
+
+@media (max-width: 500px) {
+    .startpage-banner-container {
+        width: 99.5%
+    }
+    .startpage-title-name-container {
+        h1 {
+            font-size: 40px;
+        }
+
+        h2 {
+            font-size: 24px;
+        }
+    }
+
+    .startpage-margin {
+        width: 95%;
+    }
+
+    .startpage-buttons-container {
+        gap: 8px;
+
+        .startpage-button-container {
+            border: 1px solid $white;
+            border-radius: 16px;
+            padding: 8px 18px;
+            transition: border-color 0.35s ease-in-out;
+            overflow: hidden;
+            font-size: 12px;
+            font-weight: 500;
+        }
+    }
+}

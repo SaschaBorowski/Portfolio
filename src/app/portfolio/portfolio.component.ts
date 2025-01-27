@@ -8,7 +8,7 @@ import { TranslateModule } from '@ngx-translate/core';
   standalone: true,
   imports: [CommonModule, JoinModalComponent, TranslateModule],
   templateUrl: './portfolio.component.html',
-  styleUrl: './portfolio.component.scss'
+  styleUrls: ['./portfolio.component.scss', './portfolio.component2.scss', './portfolio.component3.scss', './portfolio.component.responsive.scss', './portfolio.component.responsive2.scss']
 })
 
 export class PortfolioComponent {

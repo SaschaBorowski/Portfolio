@@ -7,7 +7,7 @@ import { TranslateModule } from '@ngx-translate/core';
   standalone: true,
   imports: [CommonModule, TranslateModule],
   templateUrl: './technologies.component.html',
-  styleUrls: ['./technologies.component.scss']
+  styleUrls: ['./technologies.component.scss', './technologies.component2.scss', './technologies.component.responsive.scss', './technologies.component.responsive2.scss']
 })
 export class TechnologiesComponent {
   isPopupVisible = false;

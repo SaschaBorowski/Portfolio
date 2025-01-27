@@ -1,0 +1,109 @@
+@import "../../colors.scss";
+
+@media (max-width: 470px) {
+    .technologies-icons-container {
+        width: 335px;
+
+        .technologies-skill-container {
+            height: 92px;
+
+            img {
+                width: 32px;
+                height: 35px;
+            }
+        }
+    }
+
+    .technologies-skill-set-container {
+        width: 95%;
+        font-size: 16px;
+        padding-left: 8px;
+        padding-right: 8px;
+        p {
+            font-size: 16px;
+        }
+        h1 {
+            font-size: 40px;
+        }
+    }
+
+    main {
+        height: 145dvh;
+
+        h2 {
+            width: 330px;
+        }
+
+
+    }
+
+    .letsTalk-container {
+        margin-top: 32px;
+    }
+
+    .popup {
+        position: absolute;
+        opacity: 0;
+        transform: scale(4);
+        pointer-events: none;
+        transition: opacity 0.15s ease-in-out, transform 0.15s ease-in-out;
+    }
+
+    .popup.visible {
+        opacity: 1;
+        transform: scale(4);
+        pointer-events: none;
+    }
+}
+@media (max-width: 410px) {
+    .technologies-youNeed {
+        font-size: 12px !important;
+    }
+
+    .technologies-anotherSkill {
+        font-size: 12px !important;
+    }
+}
+
+@media (max-width: 350px) {
+    .technologies-icons-container {
+        width: 100%;
+
+        .technologies-skill-container {
+            width: 110px;
+            height: 92px;
+
+            img {
+                width: 32px;
+                height: 35px;
+            }
+        }
+    }
+
+    .technologies-skill-set-container {
+        font-size: 16px;
+        height: 700px;
+
+        h1 {
+            font-size: 32px;
+        }
+
+        .technologies-anotherSkill-container {
+            gap: 6px;
+
+            .technologies-youNeed {
+                font-size: 10px !important;
+            }
+
+            .technologies-anotherSkill {
+                font-size: 10px !important;
+            }
+        }
+    }
+
+    main {
+        h2 {
+            width: 250px;
+        }
+    }
+}

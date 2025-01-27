@@ -12,7 +12,7 @@ import { TranslateModule } from '@ngx-translate/core';
   standalone: true,
   imports: [CommonModule, ReactiveFormsModule, TranslateModule],
   templateUrl: './contactme.component.html',
-  styleUrls: ['./contactme.component.scss', './contactme_submit_button.component.scss'],
+  styleUrls: ['./contactme.component.scss', './contactme.component2.scss', './contactme_submit_button.component.scss', 'contactme.component.responsive.scss', 'contactme.component.responsive2.scss'],
 })
 export class ContactmeComponent {
 

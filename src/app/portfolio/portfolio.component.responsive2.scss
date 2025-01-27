@@ -1,0 +1,87 @@
+@import "../../colors.scss";
+
+@media (max-width: 600px) {
+    .modal-container {
+        display: flex;
+        flex-direction: column;
+        width: 95%;
+        height: 95dvh;
+        background: linear-gradient(45deg, #1C1C1C 35%, #08463B 100%);
+        border-radius: 32px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        overflow: hidden;
+    }
+}
+
+@media (max-width: 550px) {
+    .portfolio-margin {
+        width: 350px;
+    }
+
+    .project-join-container {
+        flex-direction: column;
+        justify-content: center;
+        width: 300px;
+        padding-bottom: 8px;
+    }
+
+    .project-elPolloLoco-container {
+        flex-direction: column;
+        justify-content: center;
+        width: 300px;
+        padding-bottom: 8px;
+    }
+
+    .portfolio-description-container {
+        font-size: 14px;
+    }
+
+    .project-join-languages-container {
+        p {
+            font-size: 14px !important;
+        }
+    }
+    .project-elPolloLoco-languages-container {
+        p {
+            font-size: 14px !important;
+        }
+    }
+    .portfolio-seccond-headline-container {
+        h1 {
+            font-family: Fira Code;
+            font-weight: 700;
+            font-size: 40px;
+            color: $lightblue;
+        }
+    }
+}
+
+@media (max-width: 450px) {
+    
+    .portfolio-margin {
+        width: 330px;
+        
+    }
+}
+
+@media (max-width: 350px) {
+    .portfolio-seccond-headline-container {
+        h1 {
+            font-family: Fira Code;
+            font-weight: 700;
+            font-size: 32px;
+            color: $lightblue;
+        }
+    }
+    .portfolio-margin {
+        width: 250px;
+    }
+
+    .project-join-languages-container {
+        gap: 8px !important;
+    }
+
+    .project-elPolloLoco-languages-container {
+        gap: 8px !important;
+    }
+}

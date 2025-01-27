@@ -1,0 +1,85 @@
+@import "../../colors.scss";
+
+main {
+    .read-check-container {
+        display: flex;
+
+        .quad {
+            width: 20px;
+            height: 20px;
+            margin-right: 8px;
+            appearance: none;
+            border: 2px solid $lightblue;
+            background-color: rgba(255, 255, 255, 0);
+            box-sizing: border-box;
+            position: relative;
+            transition: scale ease-in-out 100ms;
+
+            &:hover {
+                cursor: pointer;
+                scale: 1.05;
+                transition: all 0.2s ease-in-out;
+            }
+        }
+
+        .quad::after {
+            content: '';
+            position: absolute;
+            width: 5px;
+            height: 10px;
+            border: 2px solid $lightblue;
+            border-width: 0 2px 2px 0;
+            transform: rotate(45deg);
+            top: 0px;
+            left: 5px;
+            opacity: 0;
+            transition: opacity 0.2s ease-in-out;
+        }
+
+        .quad:checked::after {
+            opacity: 1;
+        }
+
+        .karla-15-400-white {
+            font-family: Karla;
+            font-size: 15px;
+            font-weight: 400;
+            color: $white;
+        }
+
+        .d-flex {
+            display: flex;
+            align-items: center;
+        }
+
+        .firaCode-15-400-lightblue {
+            font-family: Fira Code;
+            font-size: 15px;
+            font-weight: 400;
+            color: $lightblue;
+            &:hover {
+                color: $lightblue-darker;
+            }
+        }
+    }
+}
+.error {
+    color: red;
+    font-family: Karla;
+    font-size: 14px;
+    margin-top: 4px;
+}
+
+.errorPlaceholder {
+    &::placeholder {
+      color: red !important;
+      font-family: Karla !important;
+      font-size: 16px !important;
+      font-weight: 400 !important;
+      opacity: 1 !important;
+    }
+  }
+
+  .contact-iveRead-privacy-container {
+    display:flex;
+  }
