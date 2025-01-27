@@ -28,7 +28,8 @@
     "portfolio.description1": "Explore a selection of my work here - Interact with",
     "portfolio.description2": "projects to see my skills in action.",
     "colleagues": {
-        "headline": "What my colleagues say about me",
+        "headline": "What my colleagues say",
+        "headline2": "about me",
         "vanessa": "Sascha is focused and skilled at adjusting to changing circumstances, ensuring that objectives are reached and the team stays on track. This makes him a valuable asset to the team.",
         "marcel": "Sascha's composed nature kept us focused on our work, while his technical skills played a crucial role in the project's success.",
         "mario": "Collaborating with Sascha is always enjoyable. He contributes innovative ideas and imaginative solutions to every task."
@@ -57,7 +58,7 @@
         "sayHello": "Say Hello ;)"
     },
     "footer": {
-        "webDeveloper": "Web Entwickler",
+        "webDeveloper": "Web Developer",
         "location": "Frankenthal, Germany",
         "legalNotice": "Legal Notice"
     }

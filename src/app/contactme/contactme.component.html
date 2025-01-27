@@ -59,15 +59,16 @@
       <!-- Checkbox -->
       <div class="read-check-container m-top-32">
         <input type="checkbox" id="quadratischeCheckbox" class="quad" formControlName="privacyPolicy" />
-        <div class="karla-15-400-white d-flex">
-          <div>{{ "contact.iveRead" | translate }}</div>
+        <div class="karla-15-400-white d-flex contact-iveRead-privacy-agree">
+          <div class="contact-iveRead-privacy-container">
+            <div>{{ "contact.iveRead" | translate }}</div>
 
 
-          <a href="" (click)="openPrivacyPolicy($event)" target="_blank"
-            class="firaCode-15-400-lightblue m-left-right-6">
-            {{ "contact.privacyPolicy" | translate }}
-          </a>
-
+            <a href="" (click)="openPrivacyPolicy($event)" target="_blank"
+              class="firaCode-15-400-lightblue m-left-right-6">
+              {{ "contact.privacyPolicy" | translate }}
+            </a>
+          </div>
 
           <div>{{ "contact.privacyAgree" | translate }}</div>
         </div>

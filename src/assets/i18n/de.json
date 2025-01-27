@@ -28,7 +28,8 @@
     "portfolio.description1": "Entdecken Sie eine Auswahl meiner Arbeiten hier - Interagieren Sie mit",
     "portfolio.description2": "Projekten, um meine Fähigkeiten in Aktion zu sehen.",
     "colleagues": {
-        "headline": "Was meine Kollegen über mich sagen",
+        "headline": "Was meine Kollegen über",
+        "headline2": "mich sagen",
         "vanessa": "Sascha ist fokussiert und geschickt darin, sich an ändernde Umstände anzupassen, um sicherzustellen, dass die Ziele erreicht werden und das Team auf Kurs bleibt. Das macht ihn zu einer wertvollen Unterstützung für das Team.",
         "marcel": "Saschas ruhige Art half uns, konzentriert an unserer Arbeit zu bleiben, während seine technischen Fähigkeiten eine entscheidende Rolle für den Erfolg des Projekts spielten.",
         "mario": "Die Zusammenarbeit mit Sascha ist immer angenehm. Er bringt innovative Ideen und kreative Lösungen in jede Aufgabe ein."

@@ -111,7 +111,7 @@
 
 @media (max-width: 1250px) {
     .aboutme-main {
-        height: 148dvh;
+        height: 165dvh;
     }
 
     .aboutme-main-container {
@@ -135,12 +135,6 @@
     }
 }
 
-@media (max-width: 750px) {
-    .aboutme-main {
-        height: 148dvh;
-    }
-}
-
 @media (max-width: 550px) {
     .picture-me-container {
         img {
@@ -160,8 +154,9 @@
         }
     }
 
+    
     .aboutme-text-container {
-        width:280px !important;
+        width:85% !important;
     }
 
     .aboutme-text-container {
@@ -183,7 +178,9 @@
     }
 
     .aboutme-main {
-        height: 148dvh;
+        height: 170dvh;
+        display:flex;
+        justify-content: center;
     }
 }
 
@@ -195,7 +192,7 @@
     }
 
     .aboutme-text-container {
-        width:200px !important;
+        width: 80% !important;
     }
 
     .aboutme-text-container {
@@ -218,6 +215,6 @@
     }
 
     .aboutme-main {
-        height: 158dvh;
+        height: 167dvh;
     }
 }

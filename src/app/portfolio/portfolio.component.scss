@@ -2,7 +2,7 @@
 
 main {
     background-color: $grey;
-    height: 80vh;
+    height: 80dvh;
     display: flex;
     justify-content: center;
 }
@@ -368,6 +368,9 @@ main {
 }
 
 @media (max-width: 1250px) {
+    main {
+        height: 85dvh;
+    }
     .portfolio-margin {
         width: 465px;
     }
@@ -430,9 +433,6 @@ main {
             font-size: 14px !important;
         }
     }
-}
-
-@media (max-width: 450px) {
     .portfolio-seccond-headline-container {
         h1 {
             font-family: Fira Code;
@@ -441,6 +441,10 @@ main {
             color: $lightblue;
         }
     }
+}
+
+@media (max-width: 450px) {
+    
     .portfolio-margin {
         width: 330px;
         

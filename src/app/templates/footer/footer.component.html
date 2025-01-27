@@ -1,43 +1,48 @@
 <main>
     <div class="footer-margin">
-        <div>
-            <div class="footer-logo">
-                <img src="../../assets/logo/logo.png" alt="">
-                <div class="header-logo-name-lastname-container">
-                    <div>Sascha</div>
-                    <div>Borowski</div>
+        <div class="footer-container">
+            <div>
+                <div class="footer-logo">
+                    <img src="../../assets/logo/logo.png" alt="">
+                    <div class="header-logo-name-lastname-container">
+                        <div>Sascha</div>
+                        <div>Borowski</div>
+                    </div>
+                </div>
+                <div>
+                    <p>
+                        {{ "footer.webDeveloper" | translate }}
+                    </p>
+                </div>
+                <div>
+                    <p>
+                        {{ "footer.location" | translate }}
+                    </p>
                 </div>
             </div>
-            <div>
-                <p>
-                    {{ "footer.webDeveloper" | translate }}
-                </p>
+            <div class="footer-fullname-container nonResponsiveShow">
+                © Sascha Borowski 2024
             </div>
-            <div>
-                <p>
-                    {{ "footer.location" | translate }}
-                </p>
+            <div class="footer-links-container">
+                <div>
+                    <a target="_blank" rel="noopener noreferrer" href="https://github.com/SaschaBorowski">
+                        Github
+                    </a>
+                </div>
+                <div>
+                    <a href="mailto:developer@borowski-sascha.de">
+                        Email
+                    </a>
+                </div>
+                <div>
+                    <a href="" (click)="openLegalNotice($event)" target="_blank">
+                        {{ "footer.legalNotice" | translate }}
+                    </a>
+                </div>
             </div>
         </div>
-        <div class="footer-fullname-container">
+        <div class="footer-fullname-container responsiveHide">
             © Sascha Borowski 2024
-        </div>
-        <div class="footer-links-container">
-            <div>
-                <a target="_blank" rel="noopener noreferrer" href="https://github.com/SaschaBorowski">
-                    Github
-                </a>
-            </div>
-            <div>
-                <a href="mailto:developer@borowski-sascha.de">
-                    Email
-                </a>
-            </div>
-            <div>
-                <a href="" (click)="openLegalNotice($event)" target="_blank">
-                    {{ "footer.legalNotice" | translate }}
-                </a>
-            </div>
         </div>
     </div>
 </main>

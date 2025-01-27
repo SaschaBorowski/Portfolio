@@ -307,6 +307,9 @@ main {
 }
 
 @media (max-width: 500px) {
+    .startpage-banner-container {
+        width: 99.5%
+    }
     .startpage-title-name-container {
         h1 {
             font-size: 40px;
@@ -349,6 +352,9 @@ main {
 }
 
 @media (max-width: 390px) {
+    .startpage-banner-container {
+        width: 99%
+    }
     .startpage-buttons-container {
         gap: 8px;
 

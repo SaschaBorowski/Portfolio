@@ -10,7 +10,9 @@ import { TranslateModule } from '@ngx-translate/core';
   templateUrl: './portfolio.component.html',
   styleUrl: './portfolio.component.scss'
 })
+
 export class PortfolioComponent {
+
   joinIsHovered = false;
   elPolloLocoIsHovered = false;
   isModalOpen = false;
@@ -27,7 +29,6 @@ export class PortfolioComponent {
     languages: { name: string; icon: string }[];
   } | null = null;
 
-  // Projektdaten für Join
   joinProject = {
     number: '01',
     title: 'Join',
@@ -46,7 +47,6 @@ export class PortfolioComponent {
     ]
   };
 
-  // Projektdaten für El Pollo Loco
   elPolloLocoProject = {
     number: '02',
     title: 'El Pollo Loco',
@@ -82,14 +82,16 @@ export class PortfolioComponent {
   openModal(project: 'join' | 'elPolloLoco') {
     this.isModalOpen = true;
     this.currentProject = project === 'join' ? this.joinProject : this.elPolloLocoProject;
+    document.body.style.overflow = 'hidden';
   }
 
   closeModal() {
-    this.isModalOpen = false; // Modal schließen
+    this.isModalOpen = false;
+    document.body.style.overflow = '';
   }
 
   onOverlayClick(event: MouseEvent) {
-    this.closeModal(); // Schließt das Modal
+    this.closeModal();
   }
 
   switchProject() {
