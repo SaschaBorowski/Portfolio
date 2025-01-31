@@ -11,6 +11,6 @@ import { TranslateModule } from '@ngx-translate/core';
 export class FooterComponent {
   openLegalNotice(event: MouseEvent): void {
     event.preventDefault();
-    window.open('/legal-notice', '_blank');
+    window.open('./legal-notice', '_blank');
   }
 }

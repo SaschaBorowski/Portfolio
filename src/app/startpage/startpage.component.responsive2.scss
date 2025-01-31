@@ -72,3 +72,24 @@
         }
     }
 }
+
+@media (min-width: 1930px) {
+    .startpage-margin {
+        width: 100%;
+    }
+    .maxSizeBanner-container {
+        display:flex;
+        justify-content: center;
+        width: 1920px;
+    }
+    .startpage-banner-container {
+        display: flex;
+        align-items: center;
+        width: 1930px;
+        justify-content: center;
+        position:relative;
+    }
+    .banner-text-container {
+        animation: bannerSlide 15s linear infinite;
+    }
+}

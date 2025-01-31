@@ -5,7 +5,9 @@
     scroll-behavior: smooth;
 }
 
-html, body {
+html,
+body {
+
     height: 100%;
     width: 100%;
     padding: 0;
@@ -13,4 +15,19 @@ html, body {
     font-family: Fira Code;
     font-weight: 400;
     color: $white;
+}
+
+@media (min-width: 1930px) {
+    html {
+        display:flex;
+        justify-content: center;
+        width: 100%;
+        background-color: rgb(31, 31, 31);
+    }
+    body {
+        width: 1920px;
+        display:flex;
+        justify-content: center;
+        
+    }
 }

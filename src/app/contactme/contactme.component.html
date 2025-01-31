@@ -26,35 +26,119 @@
       <div class="line"></div>
 
       <!-- Name -->
-      <div class="form-name-container m-left-32">
+      <!-- <div class="form-name-container m-left-32">
         <div class="firaCode-24-500-lightblue m-top-24"> {{ "contact.yourName" | translate }}</div>
         <input class="m-top-24 input-field-style" type="text" formControlName="name"
           [placeholder]="isSubmitted && name?.invalid ? 'Oops! it seems your name is missing' : 'Your name goes here'"
           [ngClass]="{ errorPlaceholder: isSubmitted && name?.invalid }" (focus)="onFocus('name')" />
-      </div>
+      </div> -->
 
 
-      <div class="line m-top-24"></div>
+      <!-- <div class="line m-top-24"></div> -->
 
       <!-- Email -->
-      <div class="form-email-container m-left-32">
+      <!-- <div class="form-email-container m-left-32">
         <div class="firaCode-24-500-lightblue m-top-24">{{ "contact.yourEmail" | translate }}</div>
         <input class="m-top-24 input-field-style" type="email" formControlName="email"
           [placeholder]="isSubmitted && email?.invalid ? 'Hoppla! your email is required' : 'youremail@email.com'"
           [ngClass]="{ errorPlaceholder: isSubmitted && email?.invalid }" (focus)="onFocus('email')" />
       </div>
 
-      <div class="line m-top-24"></div>
+      <div class="line m-top-24"></div> -->
 
       <!-- Nachricht -->
-      <div class="form-help-container m-left-32">
+      <!-- <div class="form-help-container m-left-32">
         <div class="firaCode-24-500-lightblue m-top-24">{{ "contact.yourMessage" | translate }}</div>
         <input class="m-top-24 input-field-style" type="text" formControlName="message"
           [placeholder]="isSubmitted && message?.invalid ? 'What do you need to develop?' : 'Hello Sascha, I am interested in...'"
           [ngClass]="{ errorPlaceholder: isSubmitted && message?.invalid }" (focus)="onFocus('message')" />
       </div>
 
-      <div class="line m-top-24"></div>
+      <div class="line m-top-24"></div> -->
+
+
+
+
+
+<!-- Name -->
+<div class="form-name-container m-left-32">
+  <div class="firaCode-24-500-lightblue m-top-24">
+    {{ "contact.yourName" | translate }}
+  </div>
+  <input class="m-top-24 input-field-style" type="text" formControlName="name"
+    [placeholder]="'Your name goes here'"
+    [ngClass]="{ 'error-border': name?.invalid && (name?.dirty || name?.touched) }" />
+  
+  <div class="error-message" *ngIf="name?.invalid && (name?.dirty || name?.touched)">
+    {{ name?.hasError('required') ? 'Oops! Your name is required.' : '' }}
+    {{ name?.hasError('pattern') ? 'Only letters are allowed.' : '' }}
+  </div>
+</div>
+
+<div class="line m-top-24"></div>
+
+<!-- Email -->
+<div class="form-email-container m-left-32">
+  <div class="firaCode-24-500-lightblue m-top-24">
+    {{ "contact.yourEmail" | translate }}
+  </div>
+  <input class="m-top-24 input-field-style" type="email" formControlName="email"
+    [placeholder]="'youremail@email.com'"
+    [ngClass]="{ 'error-border': email?.invalid && (email?.dirty || email?.touched) }" />
+  
+  <div class="error-message" *ngIf="email?.invalid && (email?.dirty || email?.touched)">
+    {{ email?.hasError('required') ? 'Hoppla! Your email is required.' : '' }}
+    {{ email?.hasError('email') ? 'Please enter a valid email address.' : '' }}
+  </div>
+</div>
+
+<div class="line m-top-24"></div>
+
+<!-- Nachricht -->
+<div class="form-help-container m-left-32">
+  <div class="firaCode-24-500-lightblue m-top-24">
+    {{ "contact.yourMessage" | translate }}
+  </div>
+  <input class="m-top-24 input-field-style" type="text" formControlName="message"
+    [placeholder]="'Hello Sascha, I am interested in...'"
+    [ngClass]="{ 'error-border': message?.invalid && (message?.dirty || message?.touched) }" />
+  
+  <div class="error-message" *ngIf="message?.invalid && (message?.dirty || message?.touched)">
+    {{ message?.hasError('required') ? 'Please enter your message.' : '' }}
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
       <!-- Checkbox -->
       <div class="read-check-container m-top-32">

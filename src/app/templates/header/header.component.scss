@@ -98,3 +98,17 @@ header {
 .hamburger-menu-container {
     display: none;
 }
+
+@media (min-width: 1930px) {
+    header {
+        width: 1920px;
+    }
+    .header-logo-container {
+        width: 90%;
+    }
+    .header-margin {
+        width: 1920px;
+        display: flex;
+        justify-content: center;
+    }
+}
