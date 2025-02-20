@@ -15,7 +15,6 @@
         display: flex;
         align-items: center;
         gap: 8px;
-
         img {
             transition: opacity 125ms ease-in-out;
             opacity: 0;
@@ -37,13 +36,11 @@
         display: flex;
         gap: 16px;
         align-items: center;
-
         p {
             font-family: Karla;
             font-weight: 400;
             font-size: 18px;
         }
-
         img {
             width: 1px;
             height: 16px;
@@ -58,7 +55,6 @@
             display: flex;
             align-items: center;
             gap: 8px;
-
             img {
                 opacity: 100;
                 display: block;
@@ -76,7 +72,6 @@
     .elPolloLoco-screenshot-container {
         position: absolute;
         right: 500px;
-
         img {
             opacity: 0;
             transition: opacity 0.2s ease-in-out;

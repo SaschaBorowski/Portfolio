@@ -1,4 +1,4 @@
-<main>
+<main id="contactme-scroll">
   <div class="contact-me-margin">
     <div class="contact-me-container">
       <div class="karla-24-500-lightblue">{{ "contact.contact" | translate }}</div>
@@ -8,152 +8,66 @@
       </div>
       <div class="firaCode-24-700-lightblue m-top-24">{{ "contact.problem" | translate }}</div>
       <div class="karla-16-400-white m-top-16">
-        {{ "contact.description" | translate }}
+        {{ "contact.description" | translate }}<br>
+        {{ "contact.description2" | translate }}
         <br>
         <br>
         <div class="contactNeedLetsTalk">
-          {{ "contact.need" | translate }} <div class="letsTalk-container karla-16-400-white">
-            <p class="karla-16-700-lightblue">{{ "contact.letstalk" | translate }}</p>
-          </div>
+          {{ "contact.need" | translate }}
+        </div>
+        <div class="letsTalk-container karla-16-400-white">
+          <p class="karla-16-700-lightblue">{{ "contact.letstalk" | translate }}</p>
         </div>
       </div>
     </div>
-
-    <!-- Formular -->
-
     <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" class="contact-form-container">
-
       <div class="line"></div>
-
-      <!-- Name -->
-      <!-- <div class="form-name-container m-left-32">
-        <div class="firaCode-24-500-lightblue m-top-24"> {{ "contact.yourName" | translate }}</div>
+      <div class="form-name-container m-left-32">
+        <div class="firaCode-24-500-lightblue m-top-24">
+          {{ "contact.yourName" | translate }}
+        </div>
         <input class="m-top-24 input-field-style" type="text" formControlName="name"
-          [placeholder]="isSubmitted && name?.invalid ? 'Oops! it seems your name is missing' : 'Your name goes here'"
-          [ngClass]="{ errorPlaceholder: isSubmitted && name?.invalid }" (focus)="onFocus('name')" />
-      </div> -->
-
-
-      <!-- <div class="line m-top-24"></div> -->
-
-      <!-- Email -->
-      <!-- <div class="form-email-container m-left-32">
-        <div class="firaCode-24-500-lightblue m-top-24">{{ "contact.yourEmail" | translate }}</div>
+          [placeholder]="'Your name goes here'"
+          [ngClass]="{ 'error-border': name?.invalid && (name?.dirty || name?.touched) }" />
+        <div class="error-message" *ngIf="name?.invalid && (name?.dirty || name?.touched)">
+          {{ name?.hasError('required') ? 'Oops! Your name is required.' : '' }}
+          {{ name?.hasError('pattern') ? 'Only letters are allowed.' : '' }}
+        </div>
+      </div>
+      <div class="line m-top-24"></div>
+      <div class="form-email-container m-left-32">
+        <div class="firaCode-24-500-lightblue m-top-24">
+          {{ "contact.yourEmail" | translate }}
+        </div>
         <input class="m-top-24 input-field-style" type="email" formControlName="email"
-          [placeholder]="isSubmitted && email?.invalid ? 'Hoppla! your email is required' : 'youremail@email.com'"
-          [ngClass]="{ errorPlaceholder: isSubmitted && email?.invalid }" (focus)="onFocus('email')" />
+          [placeholder]="'youremail@email.com'"
+          [ngClass]="{ 'error-border': email?.invalid && (email?.dirty || email?.touched) }" />
+        <div class="error-message" *ngIf="email?.invalid && (email?.dirty || email?.touched)">
+          {{ email?.hasError('required') ? 'Hoppla! Your email is required.' : '' }}
+          {{ email?.hasError('invalidEmail') ? 'Hoppla! "@" and "." is required.' : '' }}
+        </div>
       </div>
-
-      <div class="line m-top-24"></div> -->
-
-      <!-- Nachricht -->
-      <!-- <div class="form-help-container m-left-32">
-        <div class="firaCode-24-500-lightblue m-top-24">{{ "contact.yourMessage" | translate }}</div>
+      <div class="line m-top-24"></div>
+      <div class="form-help-container m-left-32">
+        <div class="firaCode-24-500-lightblue m-top-24">
+          {{ "contact.yourMessage" | translate }}
+        </div>
         <input class="m-top-24 input-field-style" type="text" formControlName="message"
-          [placeholder]="isSubmitted && message?.invalid ? 'What do you need to develop?' : 'Hello Sascha, I am interested in...'"
-          [ngClass]="{ errorPlaceholder: isSubmitted && message?.invalid }" (focus)="onFocus('message')" />
+          [placeholder]="'Hello Sascha, I am interested in...'"
+          [ngClass]="{ 'error-border': message?.invalid && (message?.dirty || message?.touched) }" />
+        <div class="error-message" *ngIf="message?.invalid && (message?.dirty || message?.touched)">
+          {{ message?.hasError('required') ? 'Please enter your message.' : '' }}
+        </div>
       </div>
-
-      <div class="line m-top-24"></div> -->
-
-
-
-
-
-<!-- Name -->
-<div class="form-name-container m-left-32">
-  <div class="firaCode-24-500-lightblue m-top-24">
-    {{ "contact.yourName" | translate }}
-  </div>
-  <input class="m-top-24 input-field-style" type="text" formControlName="name"
-    [placeholder]="'Your name goes here'"
-    [ngClass]="{ 'error-border': name?.invalid && (name?.dirty || name?.touched) }" />
-  
-  <div class="error-message" *ngIf="name?.invalid && (name?.dirty || name?.touched)">
-    {{ name?.hasError('required') ? 'Oops! Your name is required.' : '' }}
-    {{ name?.hasError('pattern') ? 'Only letters are allowed.' : '' }}
-  </div>
-</div>
-
-<div class="line m-top-24"></div>
-
-<!-- Email -->
-<div class="form-email-container m-left-32">
-  <div class="firaCode-24-500-lightblue m-top-24">
-    {{ "contact.yourEmail" | translate }}
-  </div>
-  <input class="m-top-24 input-field-style" type="email" formControlName="email"
-    [placeholder]="'youremail@email.com'"
-    [ngClass]="{ 'error-border': email?.invalid && (email?.dirty || email?.touched) }" />
-  
-  <div class="error-message" *ngIf="email?.invalid && (email?.dirty || email?.touched)">
-    {{ email?.hasError('required') ? 'Hoppla! Your email is required.' : '' }}
-    {{ email?.hasError('email') ? 'Please enter a valid email address.' : '' }}
-  </div>
-</div>
-
-<div class="line m-top-24"></div>
-
-<!-- Nachricht -->
-<div class="form-help-container m-left-32">
-  <div class="firaCode-24-500-lightblue m-top-24">
-    {{ "contact.yourMessage" | translate }}
-  </div>
-  <input class="m-top-24 input-field-style" type="text" formControlName="message"
-    [placeholder]="'Hello Sascha, I am interested in...'"
-    [ngClass]="{ 'error-border': message?.invalid && (message?.dirty || message?.touched) }" />
-  
-  <div class="error-message" *ngIf="message?.invalid && (message?.dirty || message?.touched)">
-    {{ message?.hasError('required') ? 'Please enter your message.' : '' }}
-  </div>
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      <!-- Checkbox -->
       <div class="read-check-container m-top-32">
         <input type="checkbox" id="quadratischeCheckbox" class="quad" formControlName="privacyPolicy" />
         <div class="karla-15-400-white d-flex contact-iveRead-privacy-agree">
           <div class="contact-iveRead-privacy-container">
             <div>{{ "contact.iveRead" | translate }}</div>
-
-
-            <a href="" (click)="openPrivacyPolicy($event)" target="_blank"
-              class="firaCode-15-400-lightblue m-left-right-6">
+            <a class="firaCode-15-400-lightblue m-left-right-6" (click)="scrollToTop()" routerLink="/privacy-policy">
               {{ "contact.privacyPolicy" | translate }}
             </a>
           </div>
-
           <div>{{ "contact.privacyAgree" | translate }}</div>
         </div>
         <div *ngIf="isSubmitted && privacyPolicy?.invalid" class="error">
@@ -164,6 +78,9 @@
         <button type="submit" class="sayHello-container" [disabled]="isButtonDisabled()">
           <div class="sayHello-button">{{ "contact.sayHello" | translate }}</div>
         </button>
+      </div>
+      <div class="success-message" *ngIf="successMessage">
+        Message send!
       </div>
     </form>
   </div>

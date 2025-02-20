@@ -2,9 +2,10 @@
 
 main {
     background-color: $grey;
-    height: 80dvh;
     display: flex;
     justify-content: center;
+    padding-bottom: 112px;
+    margin-top: -2px;
 }
 
 .portfolio-margin {
@@ -12,8 +13,7 @@ main {
 }
 
 .portfolio-headline-container {
-    margin-top: 128px;
-
+    padding-top: 112px;
     h2 {
         color: $lightblue;
         font-family: Karla;
@@ -46,7 +46,6 @@ main {
     .join-screenshot-container {
         position: absolute;
         right: 500px;
-
         img {
             opacity: 0;
             transition: opacity 0.2s ease-in-out;
@@ -76,14 +75,11 @@ main {
             color: $lightblue;
             cursor: pointer;
             transition: all ease-in-out 155ms;
-
             img {
                 transition: all ease-in-out 155ms;
             }
-
             &:hover {
                 color: $white;
-
                 img {
                     transform: translateX(4px);
                 }

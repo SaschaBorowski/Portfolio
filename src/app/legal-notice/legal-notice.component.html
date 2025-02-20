@@ -1,13 +1,20 @@
+<app-header></app-header>
 <main>
     <div class="legal-notice-wrapper">
-        <h1>Impressum</h1>
-        <h2><span>Anbieter</span></h2>
+        <div class="arrow-back-container">
+            <a routerLink="/">
+                <img src="../../assets/icons/arrow_back.png" alt="back">
+            </a>
+        </div>
+        <h1>{{ 'imprint.imprint' | translate }}</h1>
+        <h2><span>{{ 'imprint.provider' | translate }}</span></h2>
         <p>Sascha Borowski</p>
         <p><span>Herderstraße 1
                 67227 Frankenthal</span></p>
-        <h2><span>Kontakt</span></h2>
+        <h2><span>{{ 'imprint.contact' | translate }}</span></h2>
         <p>E-Mail: saschaborowski&#64;outlook.de</p>
         <p>Formular: <a href="https://www.borowski-sascha.de" target="_blank">www.borowski-sascha.de</a>
         </p>
     </div>
 </main>
+<app-footer></app-footer>

@@ -5,17 +5,12 @@ main {
     display: flex;
     justify-content: center;
     overflow-x: hidden;
+    height: 100dvh;
 }
 
 .startpage-margin {
     width: 90%;
-}
-
-.startpage-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 100vh;
+    height: 100%;
 }
 
 .startpage-title-name-container {
@@ -23,14 +18,12 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
     h2 {
         font-family: Fira Code;
         font-size: 40px;
         color: $white;
         margin: 0;
     }
-
     h1 {
         font-family: Karla;
         font-size: 128px;
@@ -52,7 +45,7 @@ main {
         padding: 16px 8px;
         margin-bottom: 16px;
         overflow: hidden;
-
+        
         .arrow-down {
             animation: jumpDown 1s infinite linear;
             cursor: default;
@@ -111,29 +104,29 @@ main {
 @keyframes moveLeft {
     0% {
         transform: translateX(0%);
-        visibility: visible; // Sichtbar am Start
+        visibility: visible;
     }
 
     49% {
-        visibility: visible; // Sichtbar bis kurz vor dem Verschwinden
+        visibility: visible;
     }
 
     50% {
         transform: translateX(-120%);
-        visibility: hidden; // Unsichtbar, wenn es nach links verschwindet
+        visibility: hidden;
     }
 
     51% {
         transform: translateX(120%);
-        visibility: hidden; // Unsichtbar beim "Springen" nach rechts
+        visibility: hidden;
     }
 
     52% {
-        visibility: visible; // Wieder sichtbar, wenn es von rechts zurückkommt
+        visibility: visible;
     }
 
     100% {
-        transform: translateX(0%); // Zurück zur Ausgangsposition
-        visibility: visible; // Sichtbar an der Endposition
+        transform: translateX(0%);
+        visibility: visible;
     }
 }

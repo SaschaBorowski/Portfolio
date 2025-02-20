@@ -8,20 +8,16 @@
     width: 100%;
     height: 100%;
 
-
     .growth-image-text-container {
         position: relative;
         transition: color 0.2s ease-in;
-
         p {
             transition: color 0.2s ease-in;
         }
-
         img {
             width: 60px;
             height: 60px;
         }
-
         &:hover {
             p {
                 color: $lightblue;
@@ -46,31 +42,36 @@
 
 @media (max-width: 1250px) {
     .technologies-youNeed {
-        font-size: 18px !important;
+        font-size: 16px !important;
     }
 
     .technologies-anotherSkill {
-        font-size: 18px !important;
+        font-size: 16px !important;
     }
 
     main {
-        height: 130dvh;
-
+        padding-top: 0px;
         h2 {
-            width: 465px;
-            margin-top: 40px;
+            width: 415px;
+            display:flex;
+            justify-content: flex-start;
+            margin-left: 8px;
         }
     }
 
     .technologies-container {
-        width: 95%;
+        width: 100%;
         flex-direction: column;
         align-items: center;
     }
 
     .technologies-skill-set-container {
         width: 415px;
-        height: 664px;
+        height: auto;
+        padding-bottom: 16px;
+        h1 {
+            font-size: 48px;
+        }
     }
 
     .technologies-icons-container {
@@ -80,22 +81,22 @@
 }
 
 @media (max-width: 600px) {
+    .technologies-anotherSkill-container {
+        gap: 8px !important;
+    }
     .technologies-youNeed {
         font-size: 16px !important;
     }
 
     .technologies-anotherSkill {
         font-size: 16px !important;
-    }
-
-    .technologies-skill-set-container {
-        h1 {
-            font-size: 48px;
-        }
     }
 }
 
 @media (max-width: 550px) {
+    .technologies-anotherSkill-container {
+        gap: 6px !important;
+    }
     .technologies-youNeed {
         font-size: 14px !important;
     }
@@ -104,12 +105,13 @@
         font-size: 14px !important;
     }
     .technologies-skill-set-container {
-        width: 90%;
+        width: 80%;
     }
 
     main {
         h2 {
-            width: 400px;
+            width: 80%;
+            
         }
     }
 }

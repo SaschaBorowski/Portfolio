@@ -1,0 +1,26 @@
+@import "../../colors.scss";
+
+@media (min-width: 1930px) {
+    .startpage-margin {
+        width: 1920px;
+    }
+
+    .maxSizeBanner-container {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+
+        .startpage-banner-container {
+            display: flex;
+            width: 1930px;
+            justify-content: center;
+            position: absolute;
+            bottom: 34px;
+            height: 58px;
+        }
+
+        .banner-text-container {
+            animation: bannerSlide 15s linear infinite;
+        }
+    }
+}

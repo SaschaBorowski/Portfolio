@@ -101,7 +101,7 @@
     }
 
     .close-btn-container-responsive {
-        height: 88px;
+        height: 25px;
     }
 
     .project-number {
@@ -141,36 +141,7 @@
     .project-image-responsive {
         img {
             width: auto;
-            height: 200px;
-        }
-    }
-}
-
-@media (max-width: 365px) {
-    .project-links-container {
-        gap: 16px !important;
-        justify-content: center;
-        width: 100%;
-    }
-
-    .project-link {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100px !important;
-        height: 48px;
-        border-radius: 100px;
-        border: 1px solid #D9D9D9;
-        transition: all 155ms ease-in-out;
-        cursor: pointer;
-    }
-}
-
-@media (max-width: 350px) {
-    .project-image-responsive {
-        img {
-            width: auto;
-            height: 170px;
+            height: 155px;
         }
     }
 }

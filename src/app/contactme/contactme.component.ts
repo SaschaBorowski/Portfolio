@@ -1,14 +1,15 @@
 import { Component } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators, AbstractControl, ValidationErrors } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule } from '@angular/forms';
 import { TranslateModule } from '@ngx-translate/core';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-contactme',
   standalone: true,
-  imports: [CommonModule, ReactiveFormsModule, TranslateModule],
+  imports: [CommonModule, ReactiveFormsModule, TranslateModule, RouterModule],
   templateUrl: './contactme.component.html',
   styleUrls: [
     './contactme.component.scss',
@@ -16,11 +17,13 @@ import { TranslateModule } from '@ngx-translate/core';
     './contactme_submit_button.component.scss',
     'contactme.component.responsive.scss',
     'contactme.component.responsive2.scss',
+    'contactme.component.responsive3.scss',
   ],
 })
 export class ContactmeComponent {
   contactForm: FormGroup;
   isSubmitted = false;
+  successMessage = false;
 
   constructor(private fb: FormBuilder, private http: HttpClient) {
     this.contactForm = this.fb.group({
@@ -34,11 +37,7 @@ export class ContactmeComponent {
       email: [
         '',
         {
-          validators: [
-            Validators.required,
-            Validators.email,
-            Validators.pattern('^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$'),
-          ],
+          validators: [Validators.required, this.customEmailValidator],
           updateOn: 'change',
         },
       ],
@@ -57,9 +56,9 @@ export class ContactmeComponent {
         },
       ],
     });
-
     this.contactForm.valueChanges.subscribe(() => {
       this.isSubmitted = false;
+      this.successMessage = false;
     });
   }
 
@@ -79,29 +78,36 @@ export class ContactmeComponent {
     return this.contactForm.get('privacyPolicy');
   }
 
+  customEmailValidator(control: AbstractControl): ValidationErrors | null {
+    const email = control.value;
+    if (!email) return null;
+    const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    if (!emailPattern.test(email)) {
+      return { invalidEmail: true };
+    }
+    return null;
+  }
+
   onSubmit(): void {
     this.isSubmitted = true;
-
     if (this.contactForm.valid) {
       const formData = this.contactForm.value;
       this.http.post('https://borowski-sascha.de/sendmail.php', formData).subscribe({
         next: (response: any) => {
-          console.log('Antwort vom Server:', response);
           if (response.status === 'success') {
-            alert('Form successfully submitted!');
-            this.contactForm.reset();
+            this.successMessage = true
+            setTimeout(() => {
+              this.successMessage = false
+              this.contactForm.reset();
+            }, 3000);
+            
             this.isSubmitted = false;
           } else {
-            alert('Error: ' + response.message);
           }
         },
-        error: (error) => {
-          console.error('Fehler beim Absenden:', error);
-          alert('Failed to submit the form. Please try again later.');
+        error: (err) => {
         },
       });
-    } else {
-      console.error('Form is invalid.');
     }
   }
 
@@ -109,8 +115,7 @@ export class ContactmeComponent {
     return this.contactForm.invalid;
   }
 
-  openPrivacyPolicy(event: MouseEvent): void {
-    event.preventDefault();
-    window.open('./privacy-policy', '_blank');
+  scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'instant' });
   }
 }

@@ -14,6 +14,14 @@
 }
 
 @media (max-width: 550px) {
+    .project-join-headline {
+        padding-bottom: 8px;
+    }
+
+    .project-elPolloLoco-headline {
+        padding-bottom: 8px;
+    }
+
     .portfolio-margin {
         width: 350px;
     }
@@ -57,10 +65,8 @@
 }
 
 @media (max-width: 450px) {
-    
     .portfolio-margin {
         width: 330px;
-        
     }
 }
 

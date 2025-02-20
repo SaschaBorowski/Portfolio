@@ -1,0 +1,14 @@
+@import "../../colors.scss";
+@media (min-width: 1930px) {
+    .technologies-container {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+    main {
+        h2 {
+            width: 100%;
+            padding-bottom: 8px;
+        }
+    }
+}

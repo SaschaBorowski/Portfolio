@@ -1,0 +1,18 @@
+@import "../../colors.scss";
+
+@media (min-width: 1930px) {
+    .aboutme-main {
+        width: 100% !important;
+    }
+    .aboutme-main-container {
+        width: 1920px !important;
+    }
+}
+
+@media (min-width: 2550px) {
+    .aboutme-headline-container {
+        h2 {
+            padding-bottom: 8px !important;
+        }
+    }
+}

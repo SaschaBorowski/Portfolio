@@ -76,9 +76,12 @@
 }
 
 @media (max-width: 500px) {
-    .startpage-banner-container {
-        width: 99.5%
+    .maxSizeBanner-container {
+        .startpage-banner-container {
+            width: 99.5%;
+        }
     }
+
     .startpage-title-name-container {
         h1 {
             font-size: 40px;
@@ -102,8 +105,13 @@
             padding: 8px 18px;
             transition: border-color 0.35s ease-in-out;
             overflow: hidden;
-            font-size: 12px;
+            font-size: 14px;
             font-weight: 500;
+
+            .startpage-button {
+                display: flex;
+                text-align: center;
+            }
         }
     }
 }

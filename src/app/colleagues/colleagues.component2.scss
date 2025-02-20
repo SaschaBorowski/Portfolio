@@ -1,0 +1,15 @@
+@import "../../colors.scss";
+
+.arrow-left {
+    height: 24px;
+    width: 24px;
+    background-image: url('../../assets/icons/arrow_back.svg');
+    background-repeat: no-repeat;
+    background-size:cover;
+    transition: all ease-in-out 150ms;
+    &:hover {
+      cursor: pointer;
+      scale: 1.15;
+      background-image: url('../../assets/icons/arrow_back_lightblue.svg');
+    }
+  }

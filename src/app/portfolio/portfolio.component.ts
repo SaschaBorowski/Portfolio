@@ -8,7 +8,7 @@ import { TranslateModule } from '@ngx-translate/core';
   standalone: true,
   imports: [CommonModule, JoinModalComponent, TranslateModule],
   templateUrl: './portfolio.component.html',
-  styleUrls: ['./portfolio.component.scss', './portfolio.component2.scss', './portfolio.component3.scss', './portfolio.component.responsive.scss', './portfolio.component.responsive2.scss']
+  styleUrls: ['./portfolio.component.scss', './portfolio.component2.scss', './portfolio.component3.scss', './portfolio.component.responsive.scss', './portfolio.component.responsive2.scss', './portfolio.component.responsive3.scss']
 })
 
 export class PortfolioComponent {
@@ -22,20 +22,16 @@ export class PortfolioComponent {
     title: string;
     image: string;
     description: string;
-
     githubLink: string;
     letsTestLink: string;
-
     languages: { name: string; icon: string }[];
   } | null = null;
 
   joinProject = {
     number: '01',
     title: 'Join',
-
     image: '../../assets/picture/join_overlay.png',
     description: 'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.',
-
     githubLink:'https://github.com/SaschaBorowski/Join',
     letsTestLink:'https://join.borowski-sascha.de/',
 
@@ -52,10 +48,8 @@ export class PortfolioComponent {
     title: 'El Pollo Loco',
     image: '../../assets/picture/elpolloloco_overlay.png',
     description: 'Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.',
-
     githubLink:'https://github.com/SaschaBorowski/El-pollo-Loco',
     letsTestLink:'https://elpolloloco.borowski-sascha.de/',
-
     languages: [
       { name: 'HTML', icon: '../../assets/icons/html_icon_lightblue_small.png' },
       { name: 'CSS', icon: '../../assets/icons/css_icon_lightblue_small.png' },
@@ -101,5 +95,4 @@ export class PortfolioComponent {
       this.currentProject = this.joinProject;
     }
   }
-
 }

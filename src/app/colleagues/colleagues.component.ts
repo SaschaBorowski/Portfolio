@@ -7,21 +7,19 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
   standalone: true,
   imports: [CommonModule, TranslateModule],
   templateUrl: './colleagues.component.html',
-  styleUrls: ['./colleagues.component.scss', './colleagues.component.responsive.scss']
+  styleUrls: ['./colleagues.component.scss', './colleagues.component2.scss', './colleagues.component.responsive.scss', './colleagues.component.responsive2.scss']
 })
 export class ColleaguesComponent {
   boxes = [
-    { description: '', author: 'Vanessa Krämer' },
-    { description: '', author: 'Marcel Menke' },
-    { description: '', author: 'Mario Milaj' },
+    { description: '', author: '~ Vanessa Krämer' },
+    { description: '', author: '~ Marcel Menke' },
+    { description: '', author: '~ Mario Milaj' },
   ];
 
   currentIndex = 0;
 
   constructor(private translate: TranslateService) {
-    this.updateTranslations(); // Initiale Übersetzungen laden
-
-    // Abonniere Sprachwechsel und lade die Übersetzungen neu
+    this.updateTranslations();
     this.translate.onLangChange.subscribe(() => {
       this.updateTranslations();
     });

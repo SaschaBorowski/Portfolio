@@ -16,8 +16,6 @@ export class AppComponent {
 
   constructor(private translate: TranslateService) {
     this.translate.addLangs(['de', 'en']);
-
-    // Gespeicherte Sprache aus localStorage abrufen
     const savedLang = localStorage.getItem('language') || 'en';
     this.translate.setDefaultLang(savedLang);
     this.translate.use(savedLang);

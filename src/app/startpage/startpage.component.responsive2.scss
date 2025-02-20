@@ -16,6 +16,7 @@
     .startpage-banner-container {
         width: 99%
     }
+
     .startpage-buttons-container {
         gap: 8px;
 
@@ -25,8 +26,13 @@
             padding: 8px 18px;
             transition: border-color 0.35s ease-in-out;
             overflow: hidden;
-            font-size: 10px;
+            font-size: 14px;
             font-weight: 500;
+
+            .startpage-button {
+                display: flex;
+                text-align: center;
+            }
         }
     }
 }
@@ -51,8 +57,12 @@
             padding: 8px 18px;
             transition: border-color 0.35s ease-in-out;
             overflow: hidden;
-            font-size: 9px;
+            font-size: 14px;
             font-weight: 500;
+            .startpage-button {
+                display: flex;
+                text-align: center;
+            }
         }
     }
 }
@@ -67,29 +77,12 @@
             padding: 8px 17px;
             transition: border-color 0.35s ease-in-out;
             overflow: hidden;
-            font-size: 8px;
+            font-size: 14px;
             font-weight: 500;
+            .startpage-button {
+                display: flex;
+                text-align: center;
+            }
         }
-    }
-}
-
-@media (min-width: 1930px) {
-    .startpage-margin {
-        width: 100%;
-    }
-    .maxSizeBanner-container {
-        display:flex;
-        justify-content: center;
-        width: 1920px;
-    }
-    .startpage-banner-container {
-        display: flex;
-        align-items: center;
-        width: 1930px;
-        justify-content: center;
-        position:relative;
-    }
-    .banner-text-container {
-        animation: bannerSlide 15s linear infinite;
     }
 }

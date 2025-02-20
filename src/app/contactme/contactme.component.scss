@@ -2,10 +2,10 @@
 
 main {
     background-color: $grey;
-    height: 55dvh;
     display: flex;
     justify-content: center;
-    padding-top: 160px;
+    padding-top: 112px;
+    margin-top: -2px;
 
     a {
         text-decoration: none;
@@ -73,8 +73,8 @@ main {
         }
 
         .letsTalk-container {
+            padding-bottom: 16px;
             display: flex;
-
             .karla-16-700-lightblue {
                 font-family: Karla;
                 font-size: 16px;
@@ -82,11 +82,21 @@ main {
                 color: $lightblue;
             }
         }
-
         .contactNeedLetsTalk {
             display: flex;
             align-items: center;
             gap: 8px;
         }
     }
+}
+
+.success-message {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 16px;
+    color: rgb(3, 173, 3);
+    font-family: Karla;
+    font-size: 16px;
 }

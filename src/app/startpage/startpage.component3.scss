@@ -1,0 +1,17 @@
+@import "../../colors.scss";
+
+.startpage-linkedIn-button-container {
+    margin-top: 32px;
+    width: 36px;
+    height: 36px;
+    background-image: url("../../assets/icons/Linkedin_lightblue.svg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: background-image 0.15s ease-in-out;
+
+    &:hover {
+        cursor: pointer;
+        background-image: url("../../assets/icons/Linkedin_white.svg");
+    }
+}

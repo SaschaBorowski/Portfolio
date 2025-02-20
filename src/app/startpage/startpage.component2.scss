@@ -24,7 +24,6 @@
     }
 
     .startpage-email-container {
-
         writing-mode: vertical-lr;
         transform: scale(-1, -1);
 
@@ -34,7 +33,6 @@
             transition: color 0.15s ease-in-out;
             font-family: Karla;
             font-size: 18px;
-
 
             &:hover {
                 color: $lightblue;
@@ -51,34 +49,37 @@
     }
 }
 
-.startpage-banner-container {
-    display: flex;
-    align-items: center;
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 34px;
-    height: 58px;
-    font-family: Karla;
-    font-size: 32px;
-    transform: rotate(-2deg);
+.maxSizeBanner-container {
     width: 100%;
-    background-color: #363b3a48;
-    overflow: hidden;
-    backdrop-filter: blur(1px);
-
-    .banner-text-container {
-        gap: 80px;
+    display:flex;
+    justify-content: center;
+    .startpage-banner-container {
         display: flex;
+        justify-content: center;
         align-items: center;
-        white-space: nowrap;
-        animation: bannerSlide 30s linear infinite;
+        position: absolute;
+        bottom: 34px;
+        height: 58px;
+        font-family: Karla;
+        font-size: 32px;
+        transform: rotate(-2deg);
+        width: 99.8%;
+        background-color: #363b3a48;
+        overflow: hidden;
+        backdrop-filter: blur(1px);
 
-        .banner-text {
+        .banner-text-container {
             gap: 80px;
             display: flex;
             align-items: center;
+            white-space: nowrap;
+            animation: bannerSlide 30s linear infinite;
 
+            .banner-text {
+                gap: 80px;
+                display: flex;
+                align-items: center;
+            }
         }
     }
 }
@@ -91,4 +92,21 @@
     100% {
         transform: translateX(-50%);
     }
+}
+
+.startpage-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.display-row {
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    justify-content: space-between;
 }

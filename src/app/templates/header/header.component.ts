@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterModule } from '@angular/router';
+import { RouterModule, Router, NavigationEnd } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
@@ -14,11 +14,11 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
 export class HeaderComponent {
   isMenuOpen = false;
   activeLanguage: string = 'en';
+  private scrollTarget: string | null = null;
 
-  constructor(private translate: TranslateService) {
+  constructor(private translate: TranslateService, private router: Router) {
     this.translate.addLangs(['de', 'en']);
 
-    // Gespeicherte Sprache aus dem localStorage laden
     const savedLang = localStorage.getItem('language');
     if (savedLang) {
       this.activeLanguage = savedLang;
@@ -27,6 +27,15 @@ export class HeaderComponent {
       this.translate.setDefaultLang('en');
       this.translate.use('en');
     }
+
+    this.router.events.subscribe(event => {
+      if (event instanceof NavigationEnd && this.scrollTarget) {
+        setTimeout(() => {
+          this.scrollToElement(this.scrollTarget!);
+          this.scrollTarget = null;
+        }, 300);
+      }
+    });
   }
 
   ngOnInit() {
@@ -44,11 +53,20 @@ export class HeaderComponent {
   switchLanguage(lang: string) {
     this.translate.use(lang);
     this.activeLanguage = lang;
-    localStorage.setItem('language', lang); // Sprache im localStorage speichern
+    localStorage.setItem('language', lang);
   }
 
   scrollTo(sectionId: string): void {
-    const element = document.getElementById(sectionId);
+    if (this.router.url === '/') {
+      this.scrollToElement(sectionId);
+    } else {
+      this.scrollTarget = sectionId;
+      this.router.navigate(['/']);
+    }
+  }
+
+  private scrollToElement(id: string): void {
+    const element = document.getElementById(id);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }

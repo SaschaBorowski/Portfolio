@@ -1,0 +1,28 @@
+@import "../../colors.scss";
+
+@media(min-width: 1930px) {
+    main {
+        width: 100%;
+    }
+
+    .portfolio-margin {
+        width: 1920px;
+    }
+}
+
+@media(min-width: 2550px) {
+    .join-screenshot-container {
+        right: 800px !important;
+    }
+
+    .elPolloLoco-screenshot-container {
+        right: 800px !important;
+    }
+}
+
+@media(min-width: 3830px) {
+    .modal-container {
+        width: 1920px;
+        height: auto;
+    }
+}

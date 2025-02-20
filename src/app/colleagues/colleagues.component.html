@@ -1,32 +1,29 @@
-<main>
-    <div class="colleagues-about-me-container">
-        <div class="colleagues-headline">{{ 'colleagues.headline' | translate }}</div>
-        <div class="colleagues-headline2">{{ 'colleagues.headline2' | translate }}</div>
-    </div>
-    <div class="colleagues-main-container">
-        <div class="carousel">
-            <!-- Div-Boxen -->
-            <div class="carousel-item" *ngFor="let box of boxes; let i = index" [class.active]="i === currentIndex"
-                [class.left]="i === (currentIndex - 1 + boxes.length) % boxes.length"
-                [class.right]="i === (currentIndex + 1) % boxes.length" (click)="goToIndex(i)">
-                <div class="box-content">
-
-                    <p>{{ box.description }}</p>
-                    <div class="author-container">
-                        <div class="line"></div>
-                        <p class="author-box">{{ box.author }}</p>
+<div class="colleagues-responsive">
+    <main>
+        <div class="colleagues-about-me-container">
+            <div class="colleagues-headline">{{ 'colleagues.headline' | translate }}</div>
+            <div class="colleagues-headline2">{{ 'colleagues.headline2' | translate }}</div>
+        </div>
+        <div class="colleagues-main-container">
+            <div class="carousel">
+                <div class="carousel-item" *ngFor="let box of boxes; let i = index" [class.active]="i === currentIndex"
+                    [class.left]="i === (currentIndex - 1 + boxes.length) % boxes.length"
+                    [class.right]="i === (currentIndex + 1) % boxes.length" (click)="goToIndex(i)">
+                    <div class="box-content">
+                        <p>{{ box.description }}</p>
+                        <div class="author-container">
+                            <!-- <div class="line"></div> -->
+                            <p class="author-box">{{ box.author }}</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-
-    <div class="carousel-arrows-indicator-container">
-        <div (click)="prev()" class="arrow-left"></div>
-
-        <div *ngFor="let box of boxes; let i = index" class="indicator" [class.active]="i === currentIndex"
-            (click)="goToIndex(i)"></div>
-
-        <div (click)="next()" class="arrow-right"></div>
-    </div>
-</main>
+        <div class="carousel-arrows-indicator-container">
+            <div (click)="prev()" class="arrow-left"></div>
+            <div *ngFor="let box of boxes; let i = index" class="indicator" [class.active]="i === currentIndex"
+                (click)="goToIndex(i)"></div>
+            <div (click)="next()" class="arrow-right"></div>
+        </div>
+    </main>
+</div>

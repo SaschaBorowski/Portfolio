@@ -6,7 +6,7 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
   standalone: true,
   imports: [TranslateModule],
   templateUrl: './startpage.component.html',
-  styleUrls: ['./startpage.component.scss', './startpage.component2.scss', './startpage.component.responsive.scss', './startpage.component.responsive2.scss']
+  styleUrls: ['./startpage.component.scss', './startpage.component2.scss', './startpage.component3.scss', './startpage.component.responsive.scss', './startpage.component.responsive2.scss', './startpage.component.responsive3.scss']
 })
 
 export class StartpageComponent {
@@ -16,9 +16,6 @@ export class StartpageComponent {
       this.translate.use('en');
     }
   }
-
-
-
 
   scrollTo(sectionId: string): void {
     const element = document.getElementById(sectionId);

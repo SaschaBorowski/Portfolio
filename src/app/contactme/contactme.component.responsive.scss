@@ -14,7 +14,6 @@ main {
             box-sizing: border-box;
             position: relative;
             transition: scale ease-in-out 100ms;
-
             &:hover {
                 cursor: pointer;
                 scale: 1.05;
@@ -54,7 +53,7 @@ main {
 
         .firaCode-15-400-lightblue {
             font-family: Fira Code;
-            font-size: 15px;
+            font-size: 14px;
             font-weight: 400;
             color: $lightblue;
             &:hover {

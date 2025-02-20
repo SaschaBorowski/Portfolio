@@ -10,7 +10,8 @@
 
 .aboutme-main {
     width: 100%;
-    height: 100vh;
+    margin-top: -2px;
+    padding-bottom: 48px;
     display: flex;
     justify-content: center;
     background-color: $grey;
@@ -19,7 +20,6 @@
         display: flex;
         justify-content: space-between;
         width: 90%;
-
 
         .aboutme-picture-container {
             margin-top: 128px;
@@ -32,7 +32,6 @@
                 z-index: 5;
                 position:relative;
                 
-
                 img {
                     display:block;
                     position: relative;
@@ -65,6 +64,7 @@
                     font-size: 24px;
                     font-weight: 500;
                     color: $lightblue;
+                    padding-bottom: 16px;
                 }
             }
 
@@ -78,14 +78,12 @@
                 font-size: 18px;
                 padding-left: 24px;
                 padding-right: 24px;
-
                 h1 {
                     color: $lightblue;
                     font-family: Fira Code;
                     font-weight: 700;
                     font-size: 64px;
                 }
-
                 .aboutme-flex {
                     display: flex;
                 }
@@ -100,7 +98,6 @@
     width: 20px;
     margin-right: 32px;
     margin-left: 16px;
-
     img {
         width: 32px;
         height: 32px;

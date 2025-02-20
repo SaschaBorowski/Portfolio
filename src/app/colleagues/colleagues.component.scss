@@ -1,10 +1,11 @@
 @import "../../colors.scss";
 
-main {
+.colleagues-responsive {
   width: 100%;
   background-color: $grey;
   display: flex;
   flex-direction: column;
+  margin-top: -2px;
 }
 
 .colleagues-about-me-container {
@@ -12,6 +13,8 @@ main {
   justify-content: center;
   width: 100%;
   gap: 16px;
+  padding-bottom: 16px;
+
   .colleagues-headline {
     font-family: Fira Code;
     font-weight: 700;
@@ -37,7 +40,7 @@ main {
   padding-bottom: 16px;
   position: relative;
   width: 100%;
-  height: 350px;
+  height: 300px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -47,7 +50,7 @@ main {
 .carousel-item {
   position: absolute;
   width: 35%;
-  height: 274px;
+  height: auto;
   background: #26524B;
   font-family: Karla;
   font-size: 18px;
@@ -65,18 +68,20 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 100%;
     margin-left: 32px;
     margin-right: 32px;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    gap: 24px;
   }
 
   .author-container {
     display:flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-end;
     width: 100%;
     .line {
-      width: 65%;
+      width: 63%;
       background-color: $white;
       height: 1px;
     }
@@ -121,18 +126,4 @@ main {
 
 .indicator.active {
   background: $lightblue;
-}
-
-.arrow-left {
-  height: 24px;
-  width: 24px;
-  background-image: url('../../assets/icons/arrow_back.svg');
-  background-repeat: no-repeat;
-  background-size:cover;
-  transition: all ease-in-out 150ms;
-  &:hover {
-    cursor: pointer;
-    scale: 1.15;
-    background-image: url('../../assets/icons/arrow_back_lightblue.svg');
-  }
 }

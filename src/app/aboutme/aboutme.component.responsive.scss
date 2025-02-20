@@ -1,10 +1,6 @@
 @import "../../colors.scss";
 
 @media (max-width: 1250px) {
-    .aboutme-main {
-        height: 165dvh;
-    }
-
     .aboutme-main-container {
         width: 100% !important;
         display:flex;
@@ -12,17 +8,27 @@
         align-items:center !important;
         justify-content:flex-start !important;
     }
-
     .aboutme-container {
         margin-top: 48px !important;
+        display:flex;
+        flex-direction: column;
+        align-items: center;
     }
-
     .aboutme-picture-container {
         margin-top: 48px !important;
     }
-
     .aboutme-text-container {
         width:415px !important;
+        h1 {
+            font-size: 48px !important;
+        }
+    }
+    .aboutme-headline-container {
+        width: 100%;
+        display:flex;
+        justify-content: flex-start;
+        margin-left: 8px;
+        margin-top: 16px;
     }
 }
 
@@ -32,9 +38,12 @@
             height: 500px !important;
         }
     }
-
     .aboutme-text-container {
-        width:350px !important;
+        width: 80% !important;
+    }
+    .aboutme-headline-container {
+        width: 80%;
+        margin-left: 8px;
     }
 }
 
@@ -44,12 +53,9 @@
             height: 400px !important;
         }
     }
-
-    
     .aboutme-text-container {
-        width:85% !important;
+        width:90% !important;
     }
-
     .aboutme-text-container {
         height: auto;
         background-color: #1f2e2b;
@@ -59,7 +65,6 @@
         font-size: 18px;
         padding-left: 24px;
         padding-right: 24px;
-
         h1 {
             color: $lightblue;
             font-family: Fira Code;
@@ -67,11 +72,13 @@
             font-size: 48px !important;
         }
     }
-
     .aboutme-main {
-        height: 205dvh;
         display:flex;
         justify-content: center;
+    }
+    .aboutme-headline-container {
+        width: 90%;
+        margin-left: 16px;
     }
 }
 
@@ -81,11 +88,9 @@
             height: 300px !important;
         }
     }
-
     .aboutme-text-container {
-        width: 80% !important;
+        width: 95% !important;
     }
-
     .aboutme-text-container {
         width: 568px;
         height: auto;
@@ -96,7 +101,6 @@
         font-size: 16px !important;
         padding-left: 24px;
         padding-right: 24px;
-
         h1 {
             color: $lightblue;
             font-family: Fira Code;
@@ -104,8 +108,8 @@
             font-size: 32px !important;
         }
     }
-
-    .aboutme-main {
-        height: 167dvh;
+    .aboutme-headline-container {
+        width: 95%;
+        margin-left: 0px;
     }
 }

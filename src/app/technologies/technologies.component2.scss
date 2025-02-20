@@ -6,7 +6,6 @@
     justify-content: center;
     flex-wrap: wrap;
     width: 618px;
-    height: 428px;
 
     .technologies-skill-container {
         display: flex;
@@ -19,7 +18,6 @@
         width: 150px;
         height: 132px;
         cursor: default;
-
         &:hover {
             img {
                 transition: scale 0.15s ease-in-out;

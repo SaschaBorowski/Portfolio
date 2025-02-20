@@ -1,0 +1,11 @@
+@import "../../colors.scss";
+
+@media (min-width: 1930px) {
+    main {
+        width: 100%;
+    }
+
+    .contact-me-margin {
+        width: 1920px !important;
+    }
+}

@@ -1,12 +1,19 @@
 @import "../../colors.scss";
 
+.technologies-responsive {
+    display:flex;
+    justify-content: center;
+    background-color: $grey;
+    width: 100%;
+    margin-top: -3px;
+}
+
 main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 70vh;
-    background-color: $grey;
-    padding-top: 56px;
+    width: 1920px;
+    padding-top: 64px;
 
     h2 {
         justify-content: flex-start;
@@ -16,6 +23,7 @@ main {
         font-weight: 700;
         font-size: 24px;
         color: $lightblue;
+        padding-bottom: 16px;
     }
 }
 
@@ -27,7 +35,7 @@ main {
 
 .technologies-skill-set-container {
     width: 568px;
-    height: 568px;
+    height: auto;
     background-color: #1f2e2b;
     border-radius: 30px;
     border: 1px solid $lightblue;
@@ -50,13 +58,13 @@ main {
         .technologies-youNeed {
             font-family: Fira Code;
             font-weight: 700;
-            font-size: 24px;
+            font-size: 18px;
         }
 
         .technologies-anotherSkill {
             font-family: Fira Code;
             font-weight: 700;
-            font-size: 24px;
+            font-size: 18px;
             color: $lightblue;
         }
     }
@@ -74,6 +82,7 @@ main {
     width: 128px;
     height: 39px;
     margin-top: 64px;
+    margin-bottom: 16px;
 
     &:hover {
         border-color: $lightblue;
@@ -114,4 +123,3 @@ main {
         visibility: visible;
     }
 }
-

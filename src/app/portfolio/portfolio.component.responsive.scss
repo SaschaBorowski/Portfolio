@@ -2,9 +2,7 @@
 
 @media (max-width: 1700px) {
     .join-screenshot-container {
-
         right: 100px !important;
-
         img {
             opacity: 0;
             transition: opacity 0.2s ease-in-out;
@@ -12,9 +10,7 @@
     }
 
     .elPolloLoco-screenshot-container {
-
         right: 100px !important;
-
         img {
             opacity: 0;
             transition: opacity 0.2s ease-in-out;
@@ -24,9 +20,7 @@
 
 @media (max-width: 1400px) {
     .join-screenshot-container {
-
         right: 50px !important;
-
         img {
             opacity: 0;
             transition: opacity 0.2s ease-in-out;
@@ -34,9 +28,7 @@
     }
 
     .elPolloLoco-screenshot-container {
-
         right: 50px !important;
-
         img {
             opacity: 0;
             transition: opacity 0.2s ease-in-out;
@@ -46,9 +38,7 @@
 
 @media (max-width: 1350px) {
     .join-screenshot-container {
-
         right: 15px !important;
-
         img {
             opacity: 0;
             transition: opacity 0.2s ease-in-out;
@@ -56,9 +46,7 @@
     }
 
     .elPolloLoco-screenshot-container {
-
         right: 15px !important;
-
         img {
             opacity: 0;
             transition: opacity 0.2s ease-in-out;
@@ -81,7 +69,6 @@
     .join-screenshot-container {
         display: none;
         right: 500px;
-
         img {
             opacity: 0;
             transition: opacity 0.2s ease-in-out;
@@ -91,7 +78,6 @@
     .elPolloLoco-screenshot-container {
         display: none;
         right: 500px;
-
         img {
             opacity: 0;
             transition: opacity 0.2s ease-in-out;
@@ -100,9 +86,6 @@
 }
 
 @media (max-width: 1250px) {
-    main {
-        height: 100dvh;
-    }
     .portfolio-margin {
         width: 465px;
     }
